@@ -36,6 +36,13 @@ h5,
 h6 {
   color: $color_headers;
 }
+h1 {
+  font-family: "VAG-W-bold";
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 60px;
+  letter-spacing: 2px;
+}
 h2 {
   position: relative;
   display: inline-block;
@@ -57,12 +64,12 @@ h2 {
   }
   &::after {
     left: 100%;
-    right: -9999px;
+    right: -100px;
     margin-left: 60px;
   }
   &::before {
     right: 100%;
-    left: -9999px;
+    left: -100px;
     margin-right: 60px;
   }
 }
