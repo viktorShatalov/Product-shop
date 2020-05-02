@@ -1,6 +1,9 @@
 #footer {
   padding: 80px 0;
   background-color: $color_footer-bg;
+  a {
+    color: $color_footer-linkMenu;
+  }
   .conteiner,
   .footer__nav ul {
     @include flex;
@@ -12,14 +15,14 @@
       font-weight: bold;
       width: 225px;
       margin-bottom: 25px;
-      color: $color_footer-linkMenu;
-      cursor: pointer;
-      @include transition;
-      &.active {
-        color: $color_footer-linkMenu-active;
-      }
-      &:hover {
-        color: $color_footer-linkMenu-active;
+      a {
+        @include transition;
+        &.active {
+          color: $color_footer-linkMenu-active;
+        }
+        &:hover {
+          color: $color_footer-linkMenu-active;
+        }
       }
     }
   }

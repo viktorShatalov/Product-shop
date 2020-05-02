@@ -1,7 +1,10 @@
 #header {
+  border-bottom: 3px solid $color_white;
+  a {
+    color: $color_header_link;
+  }
   .top__row {
     background-color: $color_bg_header-top__ow;
-    color: $color_header_link;
     padding: 3px 0 2px;
     .logo {
       cursor: pointer;
@@ -10,27 +13,33 @@
       ul {
         li {
           margin: 0 25px;
-          cursor: pointer;
-          @include transition;
-          &:hover {
-            @include hvrOpacity;
+          a {
+            @include transition;
+            &:hover {
+              @include hvrOpacity;
+            }
           }
         }
       }
     }
     .cabinet {
-      @include flex;
-      font-size: 1.112em;
-      cursor: pointer;
-      @include transition;
-      span {
-        display: block;
-        width: 90px;
-        padding: 0 10px;
-        text-align: center;
-      }
-      &:hover {
-        @include hvrOpacity;
+      a {
+        @include flex;
+        font-size: 1.112em;
+        cursor: pointer;
+        @include transition;
+        img {
+          object-fit: contain;
+        }
+        span {
+          display: block;
+          width: 90px;
+          padding: 0 10px;
+          text-align: center;
+        }
+        &:hover {
+          @include hvrOpacity;
+        }
       }
     }
   }

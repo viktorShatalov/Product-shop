@@ -9,10 +9,17 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/autocomplete.css">
+  <link rel="stylesheet" href="css/slideshow.css">
+  <link rel="stylesheet" href="css/slideshow.almost-flat.min.css">
+  <link rel="stylesheet" href="css/slideshow.gradient.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="js/jquery/jquery.min.js"></script>
   <script src="js/uikit.min.js"></script>
+  <script src="js/autocomplete.min.js"></script>
+  <script src="js/slideshow.min.js"></script>
+  <script src="js/slideshow-fx.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -28,17 +35,19 @@
         </div>
         <nav class="menu__items">
           <ul>
-            <li><a href="/"></a>Главная</li>
-            <li><a href="#"></a>О нас</li>
-            <li><a href="#"></a>Доставка</li>
-            <li><a href="#"></a>Оплата</li>
-            <li><a href="#"></a>Акции</li>
-            <li><a href="#"></a>Контакты</li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
         <div class="cabinet">
-          <img src="img/icon/noun_personal.png" alt="personal icon">
-          <span>Личный кабинет</span>
+          <a href="#">
+            <img src="img/icon/noun_personal.png" alt="personal icon">
+            <span>Личный кабинет</span>
+          </a>
         </div>
       </div>
     </div>
@@ -75,11 +84,46 @@
   </header>
   <!-- main -->
   <main>
+    <!-- first slider -->
     <section id="slider">
       <div class="conteiner m-auto">
-        <ul class="uk-slideshow" data-uk-slideshow="{autoplay:true}">
-          <li><img src="img/slider" width="100%" height="100%" alt="Магазин продуктов 'Корзинка'"></li>
-        </ul>
+        <div class="uk-slidenav-position" data-uk-slideshow="{animation: 'boxes-reverse'}">
+          <ul class="uk-slideshow">
+            <li>
+              <img src="img/slider/first_slider.png" alt="Магазин продуктов 'Корзинка'">
+              <span>
+                <h1>Продукты на дом</h1>
+              </span>
+            </li>
+            <li>
+              <img src="img/slider/first_slider.png" alt="Магазин продуктов 'Корзинка'">
+              <span>
+                <h1>Продукты на дом 2</h1>
+              </span>
+            </li>
+            <li>
+              <img src="img/slider/first_slider.png" alt="Магазин продуктов 'Корзинка'">
+              <span>
+                <h1>Продукты на дом 3</h1>
+              </span>
+            </li>
+          </ul>
+          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous"
+            data-uk-slideshow-item="previous"></a>
+          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+          <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+            <li data-uk-slideshow-item="0"><a href=""></a></li>
+            <li data-uk-slideshow-item="1"><a href=""></a></li>
+            <li data-uk-slideshow-item="2"><a href=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- sale product -->
+    <section id="sale__product">
+      <h2>Товары со скидкой</h2>
+      <div class="conteiner m-auto">
+
       </div>
     </section>
   </main>
@@ -89,12 +133,12 @@
       <div class="footer__menu">
         <nav class="footer__nav">
           <ul>
-            <li class="active"><a href="/"></a>Главная</li>
-            <li><a href="#"></a>О нас</li>
-            <li><a href="#"></a>Доставка</li>
-            <li><a href="#"></a>Оплата</li>
-            <li><a href="#"></a>Акции</li>
-            <li><a href="#"></a>Контакты</li>
+            <li><a class="active" href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
       </div>

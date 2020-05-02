@@ -2,7 +2,6 @@
   font-family: "Gilroy-medium";
   font-style: normal;
   font-weight: normal;
-  font-display: auto;
   src: url("../fonts/Gilroy/Gilroy-Medium.ttf") format("truetype"),
     url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
     url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot");
@@ -11,8 +10,13 @@
   font-family: "Gilroy-Regular";
   font-style: normal;
   font-weight: normal;
-  font-display: auto;
   src: url("../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype"),
     url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff"),
     url("../fonts/Gilroy/Gilroy-Regular.eot") format("eot");
+}
+@font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontawesome/FontAwesome.otf") format("otf");
 }
