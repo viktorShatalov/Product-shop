@@ -1,0 +1,450 @@
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header,
+  .contacts__content,
+  .flex-coneiner,
+  .contacts__form,
+  #advantages .content {
+    flex-wrap: wrap;
+  }
+  .contacts__form {
+    .left,
+    .right {
+      margin: 0 auto;
+    }
+  }
+  .header_btn,
+  .header .work_schedule,
+  .site_description {
+    margin: 0 auto;
+  }
+
+  #advantages .content .left_content,
+  #advantages .content .right__content {
+    margin: 0 auto;
+  }
+}
+
+// Mobile 480+*******************************************************************************************
+
+@media only screen and (min-width: 481px) and (max-width: 1124px) {
+  //  Burger Menu *******************************************************************************************
+  .navbar,
+  h1::before,
+  h1::after,
+  h2::before,
+  h2::after,
+  .header .work_schedule,
+  .site_description,
+  .reviews__slider .slider__item .item__img {
+    display: none;
+  }
+  .header {
+    justify-content: space-around;
+  }
+  .logo {
+    a {
+      img {
+        margin: 0 50px;
+      }
+    }
+  }
+  .burger {
+    display: block;
+    width: 40px;
+    height: 22px;
+    position: relative;
+    left: -1%;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .burger span {
+    position: absolute;
+    background-color: $color_burger-menu;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    top: 9px;
+    @include transition;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    background-color: $color_burger-menu;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    @include transition;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger.active span {
+    transform: scale(0);
+  }
+  .burger.active::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  .burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+  }
+  .navbar {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: -100%;
+    @include transition;
+    ul {
+      @include dspFlex;
+      flex-direction: column;
+      margin: 100px 0 0;
+      justify-content: center;
+      align-items: center;
+      li {
+        a {
+          padding: 12px 0;
+        }
+      }
+    }
+  }
+  .navbar.active {
+    left: 0;
+  }
+
+  .reviews__slider .slick-prev,
+  .slider-nav .slick-prev {
+    left: 38.5%;
+  }
+  .reviews__slider .slick-next,
+  .slider-nav .slick-next {
+    right: 44.5%;
+  }
+
+  // footer
+  #footer {
+    .conteiner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .contacts {
+      text-align: center;
+      .mail {
+        margin: 15px 20px;
+      }
+    }
+  }
+  .footer__menu ul {
+    margin: 20px 10px 0;
+  }
+  .social {
+    margin-top: 20px;
+  }
+}
+
+// Mobile *******************************************************************************************
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  h1::before,
+  h1::after,
+  h2::before,
+  h2::after,
+  .navbar,
+  .header .work_schedule,
+  .aboutUs__content .left,
+  .contacts__slider,
+  .reviews__slider .slider__item .item__img {
+    display: none;
+  }
+
+  //  Burger Menu *******************************************************************************************
+  .burger {
+    display: block;
+    width: 40px;
+    height: 22px;
+    position: relative;
+    left: -10%;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .burger span {
+    position: absolute;
+    background-color: $color_burger-menu;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    top: 9px;
+    @include transition;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    background-color: $color_burger-menu;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    @include transition;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger.active span {
+    transform: scale(0);
+  }
+  .burger.active::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  .burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+  }
+  .navbar {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: -100%;
+    @include transition;
+    ul {
+      @include dspFlex;
+      flex-direction: column;
+      margin: 100px 0 0;
+      justify-content: center;
+      align-items: center;
+      li {
+        a {
+          padding: 12px 0;
+        }
+      }
+    }
+  }
+  .navbar.active {
+    left: 0;
+  }
+
+  .header {
+    flex-direction: column;
+    & > div {
+      margin-bottom: 20px !important;
+    }
+  }
+  .logo {
+    img {
+      width: 285px;
+    }
+  }
+  #breadcumbs ul {
+    flex-wrap: wrap;
+    li {
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // modal
+  .form-input__modal {
+    flex-wrap: wrap;
+    .left,
+    .right {
+      flex: 1 1 100%;
+    }
+  }
+  .uk-close {
+    height: 30px;
+    width: 30px;
+    top: 26px;
+    right: 5px;
+    &:after {
+      font-size: 30px;
+      top: 4px;
+      right: 3px;
+    }
+  }
+
+  .modal__header {
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+  .modal-form legend {
+    text-align: center;
+  }
+  // main
+  .tab-header {
+    flex-wrap: wrap;
+  }
+  .tab-header__item {
+    margin: 0 0 15px;
+  }
+  .reviews__slider .slider__item .item__text {
+    max-width: 320px;
+    margin: 0 10px;
+  }
+  #reviews .content .btn-all__reviews {
+    bottom: -45px;
+  }
+  .slick-dots li button::before {
+    top: -2px;
+  }
+  .reviews__slider .slick-next {
+    right: 36%;
+  }
+  .reviews__slider .slick-prev {
+    left: 36%;
+  }
+
+  #tab__slider-1,
+  #tab__slider-2,
+  #tab__slider-3,
+  #slider {
+    max-width: 310px;
+    margin: 0 auto;
+  }
+  // project-cena
+  .proekty__content {
+    .item {
+      margin: 20px auto;
+    }
+  }
+  .all-category-products .slider__item {
+    margin: 10px auto;
+  }
+  //  category-page
+
+  #filtr .sizes ul li a {
+    margin: 10px 1px 10px !important;
+  }
+  #filtr .sizes ul li:first-child a {
+    margin: 10px 18px 10px -5px !important;
+  }
+  //card-product-page
+  #cardProduct .head h1 {
+    text-align: center;
+  }
+  .cardProduct__content {
+    .options {
+      flex-wrap: wrap;
+      .left__options,
+      .rigth__options {
+        max-width: 320px;
+        margin: 0 auto;
+        flex: 0 1 100%;
+        .slider-nav {
+          width: 320px;
+        }
+      }
+    }
+  }
+  .price__options .btn_switcher,
+  .price__options .btn_conteiner {
+    flex-wrap: wrap;
+  }
+  .characteristics h4,
+  .price__options h4 {
+    text-align: center;
+  }
+  .specifications__btn_item {
+    flex-direction: column;
+  }
+  .specifications h4 {
+    text-align: center;
+  }
+  .specifications__description .content ul li {
+    .description__quantity,
+    .description__left {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+  #advantages {
+    .content {
+      flex-wrap: wrap;
+    }
+    .video {
+      width: 320px;
+    }
+  }
+  .description__additions {
+    & > div {
+      width: 100%;
+    }
+  }
+  #video__reviews {
+    .video__reviews {
+      width: 100%;
+      iframe {
+        height: 220px;
+      }
+    }
+  }
+  .contacts__content {
+    .left,
+    .right {
+      flex: 0 1 100%;
+    }
+  }
+
+  #review__form,
+  #wpcf7-f360-o1 .wpcf7-form {
+    & div {
+      margin: 10px auto;
+    }
+    input[type="submit"],
+    input[type="file"] {
+      margin: 0 auto;
+    }
+    p {
+      margin: 15px auto;
+    }
+  }
+  #wpcf7-f365-o1 input[type="file"] {
+    margin-left: auto;
+  }
+  #advantages .content .left_content,
+  #advantages .content .right__content {
+    margin: 0 auto;
+  }
+  #proekty .all-category-products .slider__item,
+  #ready__project .all-category-products .slider__item {
+    margin: 10px auto;
+  }
+
+  // footer
+  #footer {
+    .conteiner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .contacts {
+      text-align: center;
+      .mail {
+        margin: 15px 20px;
+      }
+    }
+  }
+  .footer__menu ul {
+    margin: 20px 10px 0;
+  }
+  .social {
+    margin-top: 20px;
+  }
+}

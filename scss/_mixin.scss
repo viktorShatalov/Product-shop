@@ -1,0 +1,39 @@
+@mixin dspFlex {
+  display: flex;
+}
+@mixin transition {
+  transition: all 0.3s ease;
+}
+@mixin transition-modal {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin boxShadow {
+  box-shadow: 0px 0px 5px 0px rgba(37, 25, 2, 0.23);
+}
+@mixin boxShadow_video {
+  box-shadow: 10px 15px 15px 5px rgba(37, 25, 2, 0.23);
+}
+
+@mixin living-house-area {
+  .living-house-area,
+  .living-house-size {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color: $color_white;
+    color: $color_text-p;
+    z-index: 3;
+    @include dspFlex;
+    @include boxShadow;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .living-house-size {
+    left: 4px;
+  }
+}

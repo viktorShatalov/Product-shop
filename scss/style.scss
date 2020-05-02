@@ -1,0 +1,23 @@
+@import "_fonts";
+@import "_variables";
+@import "_mixin";
+@import "_mixin-form";
+@import "_buttons";
+
+/* общие настройки */
+@import "_settings";
+
+// header
+@import "_header";
+
+// main
+@import "_main.scss";
+
+// footer
+@import "_footer.scss";
+
+// modal
+@import "_modal";
+
+// media-query
+@import "_media.scss";

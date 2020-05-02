@@ -1,0 +1,226 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 2px;
+  box-shadow: 0px 0px 59px 0px rgba(35, 19, 0, 0.58);
+  width: 100%;
+  max-width: 1000px;
+  z-index: 6;
+  background-color: $color_modal_bg;
+}
+#modal {
+  .uk-modal-dialog {
+    width: 1000px;
+  }
+}
+.uk-close {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  z-index: 4;
+  top: 20px;
+  right: 20px;
+  background-color: $color_white;
+  border-radius: 4px;
+  opacity: 1;
+  &:after {
+    font-size: 40px;
+    position: absolute;
+    top: 9px;
+    right: 4px;
+  }
+}
+#myRange {
+  width: 100%;
+  max-width: 220px;
+}
+.building__area-totall {
+  display: block;
+  font-size: 1.125em;
+  font-weight: bold;
+  float: right;
+  width: 100px;
+}
+.modal-body {
+  @include dspFlex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__header {
+  position: relative;
+  background-color: #b0c8d1;
+  h3 {
+    font-size: 2.125em;
+    color: $color_white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 28px 0;
+    font-family: "Next_Art normal";
+    letter-spacing: 2px;
+  }
+}
+.form_data {
+  background-color: #cfdfdf;
+}
+.modal-form,
+.wpcf7-form {
+  color: $color_black;
+  legend {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.125em;
+    padding: 0 0 10px;
+  }
+  .input__box {
+    @include dspFlex;
+    flex-direction: column;
+    label {
+      padding-bottom: 10px;
+      cursor: pointer;
+      @include dspFlex;
+      align-items: center;
+    }
+  }
+}
+.form_data {
+  legend {
+    padding: 20px 30px;
+  }
+  .btn {
+    padding: 20px 0;
+  }
+}
+#wpcf7-f351-o2,
+#wpcf7-f365-o1 {
+  .form_data {
+    .btn {
+      padding: 0;
+    }
+  }
+}
+.totall__prace {
+  p {
+    font-size: 1.25em;
+    font-weight: bold;
+    span {
+      color: $color_black;
+    }
+  }
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+.form-input__modal {
+  @include dspFlex;
+  justify-content: space-around;
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="file"] {
+    @include input;
+    background: #ffffff;
+    height: 40px;
+    max-width: 220px;
+    border-radius: 5px;
+    color: #828282;
+    margin: 0px auto 10px;
+    padding: 0 10px;
+    font-size: 0.9em;
+  }
+  input[type="file"] {
+    background-color: #b0c8d1;
+    padding: 10px 5px;
+    margin-left: 13px;
+  }
+  .left,
+  .right {
+    flex: 1 1 50%;
+    @include dspFlex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+  }
+  .right {
+    .your-message {
+      max-width: 220px;
+      display: contents;
+      textarea {
+        max-width: 220px;
+      }
+    }
+    textarea {
+      resize: none;
+      width: 100%;
+      min-height: 140px;
+      margin: 0 20px 10px;
+      border-radius: 5px;
+      padding: 10px;
+      font-family: inherit;
+    }
+  }
+}
+#wpcf7-f351-o1 {
+  .right {
+    .your-message {
+      max-width: 220px;
+      display: contents;
+      textarea {
+        max-width: 220px;
+      }
+    }
+  }
+}
+
+input[type="submit"] {
+  @include btn;
+  display: block;
+  max-width: 240px;
+  height: 50px;
+  background-color: $color_btnPopular-bg;
+  color: $color_white;
+  margin: 0 auto;
+  border: 1px solid $color_btnPopular-bg;
+  @include transition;
+  &:hover {
+    background-color: $color_btnPopular-bg-opacity;
+  }
+}
+.about__order {
+  @include dspFlex;
+  flex-wrap: wrap;
+  color: $color_black;
+  padding: 30px 40px 20px;
+  .left,
+  .right {
+    flex: 1 1 50%;
+    & > div {
+      margin-bottom: 15px;
+    }
+  }
+}
+// modal call Form
+#modal-callForm,
+.wpcf7-form {
+  .uk-modal-dialog {
+    padding: 0;
+  }
+  input[type="file"] {
+    margin-left: auto;
+  }
+  .form_data {
+    legend {
+      text-align: center;
+    }
+  }
+}
+span.wpcf7-not-valid-tip {
+  font-size: 0.8em;
+}
+
+#wpcf7-f365-o1 {
+  input[type="file"] {
+    margin-left: 13px;
+  }
+}
