@@ -7,15 +7,11 @@
   width: 100%;
   outline: none;
   cursor: pointer;
-  border: 1px solid $color_btn-bg;
   text-transform: uppercase;
-  background-color: $color_btn-bg;
   font-family: inherit;
   font-size: 1em;
   @include transition;
 }
 @mixin btn_hover {
   background-color: $color_white;
-  border: 1px solid $color_btn-bg;
-  color: $color_btn-bg;
 }

@@ -1,0 +1,124 @@
+#header {
+  .top__row {
+    background-color: $color_bg_header-top__ow;
+    color: $color_header_link;
+    padding: 3px 0 2px;
+    .logo {
+      cursor: pointer;
+    }
+    .menu__items {
+      ul {
+        li {
+          margin: 0 25px;
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            @include hvrOpacity;
+          }
+        }
+      }
+    }
+    .cabinet {
+      @include flex;
+      font-size: 1.112em;
+      cursor: pointer;
+      @include transition;
+      span {
+        display: block;
+        width: 90px;
+        padding: 0 10px;
+        text-align: center;
+      }
+      &:hover {
+        @include hvrOpacity;
+      }
+    }
+  }
+  .bottom__row {
+    background-color: $color_bg_header-bottom__row;
+    color: $color_white;
+    font-size: 1.112em;
+    .conteiner {
+      align-items: center;
+    }
+    .catalog__menu {
+      @include flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        text-transform: uppercase;
+      }
+      .burger__catalog {
+        display: block;
+        width: 22px;
+        height: 16px;
+        position: relative;
+        margin: 0 10px 0 0;
+      }
+      .burger__catalog span {
+        position: absolute;
+        background-color: $color_white;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        top: 7px;
+      }
+      .burger__catalog::before,
+      .burger__catalog::after {
+        content: "";
+        background-color: $color_white;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+      }
+      .burger__catalog::before {
+        top: 0;
+      }
+      .burger__catalog::after {
+        bottom: 0;
+      }
+    }
+    .search {
+      position: relative;
+      input[type="search"] {
+        width: 290px;
+        height: 35px;
+        background-color: $color_search-bg;
+        border-radius: 4px;
+        padding: 0 20px;
+        font-size: 20px;
+        color: $color_header_link;
+        &::placeholder {
+          color: $color_header_link;
+        }
+      }
+      .search__btn {
+        background-color: transparent;
+        position: absolute;
+        right: 20px;
+        top: 7px;
+        cursor: pointer;
+      }
+    }
+    .contacts__phone {
+      a {
+        color: $color_white;
+      }
+    }
+    #cart {
+      margin: 15px 0;
+      cursor: pointer;
+      @include transition;
+      &:hover {
+        @include hvrOpacity;
+      }
+    }
+  }
+  .conteiner,
+  .menu__items ul {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

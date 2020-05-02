@@ -1,0 +1,31 @@
+#footer {
+  padding: 80px 0;
+  background-color: $color_footer-bg;
+  .conteiner,
+  .footer__nav ul {
+    @include flex;
+    justify-content: space-between;
+  }
+  .footer__nav ul {
+    li {
+      font-size: 1.75em;
+      font-weight: bold;
+      width: 225px;
+      margin-bottom: 30px;
+      color: $color_footer-linkMenu;
+      cursor: pointer;
+      &.active {
+        color: $color_footer-linkMenu-active;
+      }
+    }
+  }
+  .footer__menu {
+    flex: 1 1 37%;
+  }
+  .footer__contacts {
+    flex: 1 1 63%;
+  }
+}
+.footer__signature {
+  color: $color_signature;
+}

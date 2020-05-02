@@ -8,7 +8,6 @@
   width: 100%;
   max-width: 1000px;
   z-index: 6;
-  background-color: $color_modal_bg;
 }
 #modal {
   .uk-modal-dialog {
@@ -44,7 +43,7 @@
   width: 100px;
 }
 .modal-body {
-  @include dspFlex;
+  @include flex;
   justify-content: center;
   align-items: center;
 }
@@ -74,12 +73,12 @@
     padding: 0 0 10px;
   }
   .input__box {
-    @include dspFlex;
+    @include flex;
     flex-direction: column;
     label {
       padding-bottom: 10px;
       cursor: pointer;
-      @include dspFlex;
+      @include flex;
       align-items: center;
     }
   }
@@ -113,7 +112,7 @@ input[type="radio"] {
   margin-right: 10px;
 }
 .form-input__modal {
-  @include dspFlex;
+  @include flex;
   justify-content: space-around;
   input[type="text"],
   input[type="tel"],
@@ -137,7 +136,7 @@ input[type="radio"] {
   .left,
   .right {
     flex: 1 1 50%;
-    @include dspFlex;
+    @include flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
@@ -178,17 +177,14 @@ input[type="submit"] {
   display: block;
   max-width: 240px;
   height: 50px;
-  background-color: $color_btnPopular-bg;
   color: $color_white;
   margin: 0 auto;
-  border: 1px solid $color_btnPopular-bg;
   @include transition;
   &:hover {
-    background-color: $color_btnPopular-bg-opacity;
   }
 }
 .about__order {
-  @include dspFlex;
+  @include flex;
   flex-wrap: wrap;
   color: $color_black;
   padding: 30px 40px 20px;

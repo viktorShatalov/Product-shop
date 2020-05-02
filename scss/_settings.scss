@@ -14,13 +14,27 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Ubuntu normal";
-  font-size: 16px;
+  font-family: "Gilroy-medium";
+  font-size: 18px;
+}
+main {
+  background-color: $color_bg-main;
 }
 .conteiner {
   max-width: $widthContent;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 40px;
+}
+.m-auto {
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color_headers;
 }
 a {
   text-decoration: none;
@@ -38,9 +52,6 @@ img {
 }
 .lock {
   overflow: hidden;
-}
-p {
-  color: $color_text-p;
 }
 .uk-link:hover,
 a:hover {
