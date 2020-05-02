@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Магазин корзинка</title>
+  <title>Магазин "Корзинка"</title>
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
@@ -75,20 +75,13 @@
   </header>
   <!-- main -->
   <main>
-    <div class="conteiner m-auto">
-      <h1>Заголовок ервого уровня</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ipsa laboriosam quibusdam rerum? Error
-        molestiae
-        mollitia reiciendis sunt itaque inventore totam, dignissimos culpa ducimus debitis ex eaque perferendis
-        provident,
-        eius nemo laborum. Beatae quod asperiores totam saepe ut quaerat accusantium vero officia eaque delectus modi
-        ratione id qui omnis quisquam sed obcaecati, nostrum ipsam mollitia adipisci. Harum eveniet obcaecati est
-        tempora,
-        laboriosam, quia, quidem praesentium facilis laborum quas ullam possimus laudantium! Consequatur, magni! Numquam
-        nobis excepturi sint esse illo laborum ipsam nemo quia maxime natus nulla voluptates autem, accusamus pariatur
-        tenetur nostrum eligendi a fugit eius deleniti omnis distinctio voluptatum.
-      </p>
-    </div>
+    <section id="slider">
+      <div class="conteiner m-auto">
+        <ul class="uk-slideshow" data-uk-slideshow="{autoplay:true}">
+          <li><img src="img/slider" width="100%" height="100%" alt="Магазин продуктов 'Корзинка'"></li>
+        </ul>
+      </div>
+    </section>
   </main>
   <!-- footer -->
   <footer id="footer">
@@ -108,13 +101,14 @@
       <div class="footer__contacts">
         <div class="footer__subscribe">
           <p>Вы можете подписаться на рассылку выгодных предложений от нашего магазина:</p>
-          <input type="email" name="subscribe__email" id="subscribe__email">
+          <input type="email" name="subscribe__email" id="subscribe__email" placeholder="Введите ваш e-mail">
           <input type="button" value="Отправить">
         </div>
         <div class="footer__about">
           <div class="phone">
             <p>Телефон:</p>
             <a href="tel:+7 (000) 000-00-00">+7 (000) 000-00-00</a>
+            <br>
             <a href="tel:8 000 111-11-11">8 000 111-11-11</a>
           </div>
           <div class="operating__mode">
