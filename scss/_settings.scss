@@ -4,7 +4,8 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
+  box-shadow: none;
   vertical-align: baseline;
   outline: none;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +20,7 @@ body {
 }
 main {
   background-color: $color_bg-main;
+  padding: 80px 0;
 }
 .conteiner {
   max-width: $widthContent;

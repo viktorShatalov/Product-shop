@@ -47,6 +47,10 @@
     background-color: $color_bg_header-bottom__row;
     color: $color_white;
     font-size: 1.112em;
+    padding: 15px 0;
+    a {
+      color: $color_white;
+    }
     .conteiner {
       align-items: center;
     }
@@ -88,9 +92,10 @@
         bottom: 0;
       }
     }
-    .search {
+    .search,
+    #search {
       position: relative;
-      input[type="search"] {
+      input[name="search"] {
         width: 290px;
         height: 35px;
         background-color: $color_search-bg;
@@ -98,6 +103,7 @@
         padding: 0 20px;
         font-size: 20px;
         color: $color_header_link;
+        border: none;
         &::placeholder {
           color: $color_header_link;
         }
@@ -105,9 +111,13 @@
       .search__btn {
         background-color: transparent;
         position: absolute;
-        right: 20px;
-        top: 7px;
-        cursor: pointer;
+        right: 10px;
+        top: -1px;
+        width: 50px;
+        img {
+          max-width: 20px;
+          height: 20px;
+        }
       }
     }
     .contacts__phone {
@@ -115,12 +125,17 @@
         color: $color_white;
       }
     }
-    #cart {
-      margin: 15px 0;
+    #cart,
+    .cart {
       cursor: pointer;
-      @include transition;
-      &:hover {
-        @include hvrOpacity;
+      .cart__btn {
+        max-width: 40px;
+        height: 37px;
+        background-color: transparent;
+        img {
+          max-width: 41px;
+          height: 37px;
+        }
       }
     }
   }

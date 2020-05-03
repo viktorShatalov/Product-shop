@@ -21,13 +21,6 @@
 }
 
 @font-face {
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/fontawesome/FontAwesome.otf") format("otf");
-}
-
-@font-face {
   font-family: "Gilroy-medium";
   font-style: normal;
   font-weight: normal;
@@ -48,18 +41,13 @@
   src: url("../fonts/VAGWorld/vag-world-bold.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/fontawesome/FontAwesome.otf") format("otf");
-}
-
 /* общие настройки */
 * {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   vertical-align: baseline;
   outline: none;
   -webkit-font-smoothing: antialiased;
@@ -75,6 +63,7 @@ body {
 
 main {
   background-color: #ff801a;
+  padding: 80px 0;
 }
 
 .conteiner {
@@ -238,6 +227,11 @@ ul {
   background-color: #ff7303;
   color: white;
   font-size: 1.112em;
+  padding: 15px 0;
+}
+
+#header .bottom__row a {
+  color: white;
 }
 
 #header .bottom__row .conteiner {
@@ -297,11 +291,13 @@ ul {
   bottom: 0;
 }
 
-#header .bottom__row .search {
+#header .bottom__row .search,
+#header .bottom__row #search {
   position: relative;
 }
 
-#header .bottom__row .search input[type="search"] {
+#header .bottom__row .search input[name="search"],
+#header .bottom__row #search input[name="search"] {
   width: 290px;
   height: 35px;
   background-color: #ffe3cd;
@@ -309,45 +305,64 @@ ul {
   padding: 0 20px;
   font-size: 20px;
   color: #ff8625;
+  border: none;
 }
 
-#header .bottom__row .search input[type="search"]::-webkit-input-placeholder {
+#header .bottom__row .search input[name="search"]::-webkit-input-placeholder,
+#header .bottom__row #search input[name="search"]::-webkit-input-placeholder {
   color: #ff8625;
 }
 
-#header .bottom__row .search input[type="search"]:-ms-input-placeholder {
+#header .bottom__row .search input[name="search"]:-ms-input-placeholder,
+#header .bottom__row #search input[name="search"]:-ms-input-placeholder {
   color: #ff8625;
 }
 
-#header .bottom__row .search input[type="search"]::-ms-input-placeholder {
+#header .bottom__row .search input[name="search"]::-ms-input-placeholder,
+#header .bottom__row #search input[name="search"]::-ms-input-placeholder {
   color: #ff8625;
 }
 
-#header .bottom__row .search input[type="search"]::placeholder {
+#header .bottom__row .search input[name="search"]::placeholder,
+#header .bottom__row #search input[name="search"]::placeholder {
   color: #ff8625;
 }
 
-#header .bottom__row .search .search__btn {
+#header .bottom__row .search .search__btn,
+#header .bottom__row #search .search__btn {
   background-color: transparent;
   position: absolute;
-  right: 20px;
-  top: 7px;
-  cursor: pointer;
+  right: 10px;
+  top: -1px;
+  width: 50px;
+}
+
+#header .bottom__row .search .search__btn img,
+#header .bottom__row #search .search__btn img {
+  max-width: 20px;
+  height: 20px;
 }
 
 #header .bottom__row .contacts__phone a {
   color: white;
 }
 
-#header .bottom__row #cart {
-  margin: 15px 0;
+#header .bottom__row #cart,
+#header .bottom__row .cart {
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
-#header .bottom__row #cart:hover {
-  opacity: 0.7;
+#header .bottom__row #cart .cart__btn,
+#header .bottom__row .cart .cart__btn {
+  max-width: 40px;
+  height: 37px;
+  background-color: transparent;
+}
+
+#header .bottom__row #cart .cart__btn img,
+#header .bottom__row .cart .cart__btn img {
+  max-width: 41px;
+  height: 37px;
 }
 
 #header .conteiner,
@@ -445,7 +460,7 @@ ul {
   max-width: 345px;
   padding: 0 25px;
   margin-bottom: 35px;
-  font-size: 1.35em;
+  font-size: 1.5em;
   color: #ff8625;
 }
 

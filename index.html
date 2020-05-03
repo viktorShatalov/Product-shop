@@ -60,7 +60,7 @@
           <span>Каталог товаров</span>
         </div>
         <div class="search">
-          <input type="search" id="input__search" placeholder="Найти товар">
+          <input type="search" name="search" id="input__search" placeholder="Найти товар">
           <button class="search__btn">
             <img src="img/icon/search_icon.png" alt="img btn">
           </button>
@@ -73,8 +73,10 @@
         <div class="contacts__phone">
           <a href="tel:+7 (999) 999-99-99">+7 (999) 999-99-99</a>
         </div>
-        <div id="cart">
-          <img src="img/icon/noun_cart.png" alt="cart">
+        <div id="cart" class="cart">
+          <button class="cart__btn">
+            <img src="img/icon/noun_cart.png" alt="cart">
+          </button>
           <span>
             Корзина
           </span>
@@ -88,27 +90,10 @@
     <section id="slider">
       <div class="conteiner m-auto">
         <div class="uk-slidenav-position" data-uk-slideshow="{animation: 'boxes-reverse'}">
-          <ul class="uk-slideshow">
+          <ul>
             <li>
               <img src="img/slider/first_slider.png" alt="Магазин продуктов 'Корзинка'">
-              <h1>Продукты<br> на дом</h1>
             </li>
-            <li>
-              <img src="img/slider/first_slider.png" alt="Магазин продуктов 'Корзинка'">
-              <h1>Продукты<br> на дом 2</h1>
-            </li>
-            <li>
-              <img src="img/slider/first_slider.png" alt="Магазин продуктов 'Корзинка'">
-              <h1>Продукты<br> на дом 3</h1>
-            </li>
-          </ul>
-          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous"
-            data-uk-slideshow-item="previous"></a>
-          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-          <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-            <li data-uk-slideshow-item="0"><a href=""></a></li>
-            <li data-uk-slideshow-item="1"><a href=""></a></li>
-            <li data-uk-slideshow-item="2"><a href=""></a></li>
           </ul>
         </div>
       </div>
