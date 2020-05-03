@@ -57,9 +57,10 @@
     .catalog__menu {
       @include flex;
       align-items: center;
-      cursor: pointer;
+      position: relative;
       span {
         text-transform: uppercase;
+        cursor: pointer;
       }
       .burger__catalog {
         display: block;
@@ -90,6 +91,71 @@
       }
       .burger__catalog::after {
         bottom: 0;
+      }
+      .category {
+        .category__box-menu {
+          display: flex;
+        }
+        background-color: $color_bg_category-menu;
+        position: absolute;
+        top: 51px;
+        left: 0;
+        font-size: 0.7em;
+        a {
+          display: inline-block;
+          margin: 8px 40px 12px 15px;
+          font-weight: bold;
+        }
+        .category__menu-items {
+          border-right: 4px solid $color_white;
+          li {
+            width: 225px;
+            @include transition;
+            &:hover {
+              background-color: $color_white;
+              width: 230px;
+              margin-left: -5px;
+              padding-left: 5px;
+            }
+            a {
+              white-space: initial;
+              color: $color_category-menu_text;
+            }
+          }
+        }
+        .box__sub-menu {
+          padding: 25px;
+          width: 1000px;
+          h3 {
+            font-size: 1.5em;
+            color: $color_category-menu_text;
+            padding: 8px 15px 12px;
+          }
+        }
+        .category__sub-menu {
+          @include flex;
+          li {
+            display: block;
+            width: 33%;
+            a {
+              white-space: nowrap;
+              color: $color_subCategory-menu_text;
+              padding: 0px 15px 0px 0;
+              &:hover {
+                opacity: 0.75;
+              }
+            }
+          }
+        }
+        .category__description {
+          background-color: $color_white;
+          p {
+            color: $color_subCategory-menu_text;
+            text-transform: initial;
+            padding: 10px 0;
+            text-align: center;
+          }
+        }
       }
     }
     .search,

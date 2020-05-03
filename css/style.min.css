@@ -249,11 +249,12 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
+  position: relative;
 }
 
 #header .bottom__row .catalog__menu span {
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #header .bottom__row .catalog__menu .burger__catalog {
@@ -289,6 +290,93 @@ ul {
 
 #header .bottom__row .catalog__menu .burger__catalog::after {
   bottom: 0;
+}
+
+#header .bottom__row .catalog__menu .category {
+  background-color: #ffe3cd;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  font-size: 0.7em;
+}
+
+#header .bottom__row .catalog__menu .category .category__box-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header .bottom__row .catalog__menu .category a {
+  display: inline-block;
+  margin: 8px 40px 12px 15px;
+  font-weight: bold;
+}
+
+#header .bottom__row .catalog__menu .category .category__menu-items {
+  border-right: 4px solid white;
+}
+
+#header .bottom__row .catalog__menu .category .category__menu-items li {
+  width: 225px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#header .bottom__row .catalog__menu .category .category__menu-items li:hover {
+  background-color: white;
+  width: 230px;
+  margin-left: -5px;
+  padding-left: 5px;
+}
+
+#header .bottom__row .catalog__menu .category .category__menu-items li a {
+  white-space: initial;
+  color: #333333;
+}
+
+#header .bottom__row .catalog__menu .category .box__sub-menu {
+  padding: 25px;
+  width: 1000px;
+}
+
+#header .bottom__row .catalog__menu .category .box__sub-menu h3 {
+  font-size: 1.5em;
+  color: #333333;
+  padding: 8px 15px 12px;
+}
+
+#header .bottom__row .catalog__menu .category .category__sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#header .bottom__row .catalog__menu .category .category__sub-menu li {
+  display: block;
+  width: 33%;
+}
+
+#header .bottom__row .catalog__menu .category .category__sub-menu li a {
+  white-space: nowrap;
+  color: #666666;
+  padding: 0px 15px 0px 0;
+}
+
+#header .bottom__row .catalog__menu .category .category__sub-menu li a:hover {
+  opacity: 0.75;
+}
+
+#header .bottom__row .catalog__menu .category .category__description {
+  background-color: white;
+}
+
+#header .bottom__row .catalog__menu .category .category__description p {
+  color: #666666;
+  text-transform: initial;
+  padding: 10px 0;
+  text-align: center;
 }
 
 #header .bottom__row .search,
@@ -416,7 +504,7 @@ ul {
   font-size: 1.75em;
   font-weight: bold;
   width: 225px;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 #footer .footer__nav ul li a {

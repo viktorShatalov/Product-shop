@@ -19,18 +19,17 @@
 		<div class="swiper-button-prev"></div>
 	</div>
 </div>
-<script type="text/javascript">
-
-	$('#slideshow   {{ module }}').swiper({
+<script type="text/javascript"><!--
+	$('#slideshow{{ module }}').swiper({
 mode: 'horizontal',
 slidesPerView: 1,
-pagination: '.slideshow   {{ module }}',
+pagination: '.slideshow      {{ module }}',
 paginationClickable: true,
 nextButton: '.swiper-button-next',
 prevButton: '.swiper-button-prev',
 spaceBetween: 30,
 autoplay: 3500,
-autoplayDisableOnInteraction: false,
+autoplayDisableOnInteraction: true,
 loop: true
-});
+});-->
 </script>

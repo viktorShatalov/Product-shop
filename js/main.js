@@ -8,5 +8,17 @@ jQuery(document).ready(function () {
     })
 
 
+    $('a').on('click', function (e) {
+        e.preventDefault();
+    });
+
+
+    // $(".category__menu-items li").hover(
+    //     function () {
+    //         $(this).addClass("active")
+    //     }, function () {
+    //         $(this).removeClass("active");
+    //     }
+    // );
 
 })
