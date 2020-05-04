@@ -93,12 +93,15 @@
         bottom: 0;
       }
       .category {
+        display: none;
+        z-index: 2;
+        width: 1200px;
         .category__box-menu {
           display: flex;
         }
         background-color: $color_bg_category-menu;
         position: absolute;
-        top: 51px;
+        top: 50px;
         left: 0;
         font-size: 0.7em;
         a {
@@ -111,21 +114,22 @@
           li {
             width: 225px;
             @include transition;
+            white-space: initial;
+            color: $color_category-menu_text;
+            padding: 8px 40px 12px 15px;
+            font-weight: bold;
+            cursor: pointer;
             &:hover {
               background-color: $color_white;
               width: 230px;
               margin-left: -5px;
-              padding-left: 5px;
-            }
-            a {
-              white-space: initial;
-              color: $color_category-menu_text;
+              padding-left: 20px;
             }
           }
         }
         .box__sub-menu {
           padding: 25px;
-          width: 1000px;
+          display: none;
           h3 {
             font-size: 1.5em;
             color: $color_category-menu_text;
@@ -133,7 +137,9 @@
           }
         }
         .category__sub-menu {
-          @include flex;
+          ul {
+            @include flex;
+          }
           li {
             display: block;
             width: 33%;
@@ -178,8 +184,9 @@
         background-color: transparent;
         position: absolute;
         right: 10px;
-        top: -1px;
+        top: 0px;
         width: 50px;
+        height: 35px;
         img {
           max-width: 20px;
           height: 20px;
@@ -193,15 +200,19 @@
     }
     #cart,
     .cart {
-      cursor: pointer;
+      @include flex;
+      align-items: center;
       .cart__btn {
-        max-width: 40px;
-        height: 37px;
         background-color: transparent;
+        cursor: pointer;
         img {
           max-width: 41px;
           height: 37px;
+          cursor: pointer;
         }
+      }
+      a {
+        margin-left: 5px;
       }
     }
   }

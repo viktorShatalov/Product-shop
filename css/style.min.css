@@ -293,9 +293,12 @@ ul {
 }
 
 #header .bottom__row .catalog__menu .category {
+  display: none;
+  z-index: 2;
+  width: 1200px;
   background-color: #ffe3cd;
   position: absolute;
-  top: 51px;
+  top: 50px;
   left: 0;
   font-size: 0.7em;
 }
@@ -320,23 +323,23 @@ ul {
   width: 225px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  white-space: initial;
+  color: #333333;
+  padding: 8px 40px 12px 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #header .bottom__row .catalog__menu .category .category__menu-items li:hover {
   background-color: white;
   width: 230px;
   margin-left: -5px;
-  padding-left: 5px;
-}
-
-#header .bottom__row .catalog__menu .category .category__menu-items li a {
-  white-space: initial;
-  color: #333333;
+  padding-left: 20px;
 }
 
 #header .bottom__row .catalog__menu .category .box__sub-menu {
   padding: 25px;
-  width: 1000px;
+  display: none;
 }
 
 #header .bottom__row .catalog__menu .category .box__sub-menu h3 {
@@ -345,7 +348,7 @@ ul {
   padding: 8px 15px 12px;
 }
 
-#header .bottom__row .catalog__menu .category .category__sub-menu {
+#header .bottom__row .catalog__menu .category .category__sub-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,8 +424,9 @@ ul {
   background-color: transparent;
   position: absolute;
   right: 10px;
-  top: -1px;
+  top: 0px;
   width: 50px;
+  height: 35px;
 }
 
 #header .bottom__row .search .search__btn img,
@@ -437,20 +441,32 @@ ul {
 
 #header .bottom__row #cart,
 #header .bottom__row .cart {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #header .bottom__row #cart .cart__btn,
 #header .bottom__row .cart .cart__btn {
-  max-width: 40px;
-  height: 37px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 #header .bottom__row #cart .cart__btn img,
 #header .bottom__row .cart .cart__btn img {
   max-width: 41px;
   height: 37px;
+  cursor: pointer;
+}
+
+#header .bottom__row #cart a,
+#header .bottom__row .cart a {
+  margin-left: 5px;
 }
 
 #header .conteiner,
