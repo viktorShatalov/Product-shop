@@ -9,7 +9,7 @@
   transition: all 0.2s ease-in-out;
 }
 @mixin boxShadow {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
 }
 @mixin hvrOpacity {
   opacity: 0.7;

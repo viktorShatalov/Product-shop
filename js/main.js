@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
         jQuery('html,body').toggleClass('lock');
     })
 
-    // вcategory dropdown menu
+    // category dropdown menu
     // show menu
     jQuery(".catalog__menu span").click(function () {
         jQuery('.category').toggle('slow')
@@ -24,6 +24,49 @@ jQuery(document).ready(function () {
         } else jQuery('.box__sub-menu').hide('normal');
         return false;
     })
+
+    // sliders
+    jQuery('.first__slider').slick({
+        arrows: false,
+        dots: false,
+        infinite: true,
+        lazyLoad: "progressive",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 3500,
+        // responsive: [
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             slidesToShow: 1,
+        //             centerMode: true,
+        //         }
+        //     }
+        // ]
+    });
+
+
+    jQuery('.sale__product-slider').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        lazyLoad: "progressive",
+        slidesToScroll: 1,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 3500,
+        // responsive: [
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             slidesToShow: 1,
+        //             centerMode: true,
+        //         }
+        //     }
+        // ]
+    });
 
 
 })

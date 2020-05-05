@@ -95,7 +95,7 @@
       .category {
         display: none;
         z-index: 2;
-        width: 1200px;
+        width: 1230px;
         .category__box-menu {
           display: flex;
         }
@@ -181,8 +181,7 @@
         }
       }
       .search__btn {
-        background-color: transparent;
-        position: absolute;
+        @include cart-btn;
         right: 10px;
         top: 0px;
         width: 50px;

@@ -12,6 +12,10 @@
   font-size: 1em;
   @include transition;
 }
-@mixin btn_hover {
-  background-color: $color_white;
+@mixin cart-btn {
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  text-transform: uppercase;
+  @include transition;
 }
