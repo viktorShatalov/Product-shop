@@ -107,6 +107,65 @@ pre,
 ul {
   margin: 0;
 }
+
+// sliders settings
+.first__slider {
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    li {
+      background-color: $color_white;
+      margin: 0 7.5px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      button {
+        color: transparent;
+        background-color: transparent;
+      }
+      &.slick-active {
+        box-shadow: 0 0 0 3px $color_footer-subscribe-btn;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $color_slider_arows;
+    cursor: pointer;
+  }
+  .slick-prev {
+    right: -40px;
+    &::before {
+      content: url(../img/icon/arrow_next_firstSlider.png);
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+    }
+  }
+  .slick-next {
+    left: -40px;
+    &::before {
+      content: url(../img/icon/arrow_prew_firstSlider.png);
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 .sale__product-slider {
   .slick-prev,
   .slick-next {

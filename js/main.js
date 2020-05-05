@@ -27,8 +27,8 @@ jQuery(document).ready(function () {
 
     // sliders
     jQuery('.first__slider').slick({
-        arrows: false,
-        dots: false,
+        arrows: true,
+        dots: true,
         infinite: true,
         lazyLoad: "progressive",
         slidesToShow: 1,
@@ -57,15 +57,7 @@ jQuery(document).ready(function () {
         variableWidth: true,
         autoplay: true,
         autoplaySpeed: 3500,
-        // responsive: [
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             centerMode: true,
-        //         }
-        //     }
-        // ]
+        centerMode: true,
     });
 
 
