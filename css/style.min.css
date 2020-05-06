@@ -490,7 +490,6 @@ ul {
 }
 
 #header .bottom__row .catalog__menu .category {
-  display: none;
   z-index: 4;
   width: 1225px;
   background-color: #ffe3cd;
@@ -514,6 +513,10 @@ ul {
 
 #header .bottom__row .catalog__menu .category .category__menu-items {
   border-right: 4px solid white;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffe3cd;
 }
 
 #header .bottom__row .catalog__menu .category .category__menu-items li {
@@ -534,11 +537,14 @@ ul {
   padding-left: 20px;
 }
 
-#header .bottom__row .catalog__menu .category .box__sub-menu {
+#header .bottom__row .catalog__menu .category .box__sub-menu > * {
+  background-color: #ffe3cd;
   padding: 25px;
+  display: none;
+  height: 100%;
 }
 
-#header .bottom__row .catalog__menu .category .box__sub-menu h3 {
+#header .bottom__row .catalog__menu .category .box__sub-menu > * h3 {
   font-size: 1.5em;
   color: #333333;
   padding: 8px 15px 12px;
@@ -565,6 +571,14 @@ ul {
 
 #header .bottom__row .catalog__menu .category .category__sub-menu li a:hover {
   opacity: 0.75;
+}
+
+#header .bottom__row .catalog__menu .category .hidden {
+  display: none !important;
+}
+
+#header .bottom__row .catalog__menu .category .visuallyhidden {
+  opacity: 0 !important;
 }
 
 #header .bottom__row .catalog__menu .category .category__description {
