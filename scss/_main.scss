@@ -18,14 +18,14 @@
 }
 
 // sale__product
-.sale__product-slider {
+.sale__product-slider,
+.product__items {
   @include flex;
   justify-content: space-between;
   .sale__product-card {
     @include boxShadow;
     background-color: $color_white;
-    width: 100%;
-    max-width: 230px;
+    width: 230px;
     padding: 0 15px 15px;
     border-radius: 5px;
     font-family: "Gilroy-Regular";

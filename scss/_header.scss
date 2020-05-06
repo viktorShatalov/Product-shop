@@ -59,8 +59,10 @@
       align-items: center;
       position: relative;
       span {
-        text-transform: uppercase;
         cursor: pointer;
+      }
+      .category__link {
+        text-transform: uppercase;
       }
       .burger__catalog {
         display: block;
@@ -94,8 +96,8 @@
       }
       .category {
         display: none;
-        z-index: 2;
-        width: 1230px;
+        z-index: 4;
+        width: 1225px;
         .category__box-menu {
           display: flex;
         }
@@ -129,7 +131,6 @@
         }
         .box__sub-menu {
           padding: 25px;
-          display: none;
           h3 {
             font-size: 1.5em;
             color: $color_category-menu_text;

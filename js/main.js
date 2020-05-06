@@ -14,16 +14,16 @@ jQuery(document).ready(function () {
     });
 
     // show subcategory
-    jQuery('.category__box-menu>ul').click(function () {
-        jQuery('.category__box-menu>ul').removeClass('active');
-        if (jQuery(this).next('.box__sub-menu').css("display") == "none") {
-            jQuery('.box__sub-menu').hide('normal');
-            jQuery(this).next('.box__sub-menu').toggle('normal');
-            jQuery('.category__box-menu>ul').removeClass('active');
-            jQuery(this).toggleClass('active');
-        } else jQuery('.box__sub-menu').hide('normal');
-        return false;
-    })
+    // jQuery('.category__box-menu>ul').click(function () {
+    //     jQuery('.category__box-menu>ul').removeClass('active');
+    //     if (jQuery(this).next('.box__sub-menu').css("display") == "none") {
+    //         jQuery('.box__sub-menu').hide('normal');
+    //         jQuery(this).next('.box__sub-menu').toggle('normal');
+    //         jQuery('.category__box-menu>ul').removeClass('active');
+    //         jQuery(this).toggleClass('active');
+    //     } else jQuery('.box__sub-menu').hide('normal');
+    //     return false;
+    // })
 
     // sliders
     jQuery('.first__slider').slick({
@@ -60,5 +60,23 @@ jQuery(document).ready(function () {
         centerMode: true,
     });
 
+    // filtr
+    jQuery.easing.def = "easeInOutQuad";
+    jQuery('li.button a').click(function (e) {
+        var dropDown = jQuery(this).parent().next();
+        jQuery('.dropdown').not(dropDown).slideUp('slow');
+        dropDown.slideToggle('slow');
+        e.preventDefault();
+    })
+    // loadMore
+
+    jQuery('#showmore button').click(function () {
+        if (jQuery(".showmore").is(":hidden")) {
+            jQuery(".showmore").show("slow");
+            jQuery("#showmore button").prop('disabled', true);
+        } else {
+            jQuery(".showmore").slideUp();
+        }
+    });
 
 })
