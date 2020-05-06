@@ -277,6 +277,45 @@ ul {
           transform: translateX(-50%);
 }
 
+.slider-nav .slick-prev,
+.slider-nav .slick-next {
+  position: absolute;
+  z-index: 2;
+  color: transparent;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.slider-nav .slick-prev {
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fefefe), to(rgba(254, 254, 254, 0)));
+  background-image: linear-gradient(360deg, #fefefe 0%, rgba(254, 254, 254, 0) 100%);
+  width: 105px;
+}
+
+.slider-nav .slick-prev::before {
+  content: url(../img/icon/arrow_down-slider_nav.png);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -25px;
+}
+
+.slider-nav .slick-next {
+  top: -70px;
+}
+
+.slider-nav .slick-next::before {
+  content: url(../img/icon/arrow_up-slider_nav.png);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 #breadcumbs {
   margin-bottom: 30px;
   font-size: 0.785em;
@@ -1030,40 +1069,44 @@ ul {
   border-bottom: 1px solid #ff7800;
 }
 
-#category .category .category__items {
+#category .category-page .category__items {
   padding-bottom: 30px;
   border-bottom: 3px solid rgba(151, 151, 151, 0.514);
 }
 
-#category .category .item {
+#category .category-page .item {
   margin: 30px 40px 0 0;
-  width: 205px;
+  width: 220px;
 }
 
-#category .category .item .button {
+#category .category-page .item .button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-#category .category .item .button a {
+#category .category-page .item .button > a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-#category .category .item .button a:hover {
+#category .category-page .item .button > a:hover {
   font-weight: bold;
   color: #ff7800;
 }
 
-#category .category .dropdown {
+#category .category-page .dropdown {
   display: none;
 }
 
-#category .category .dropdown ul {
+#category .category-page .dropdown ul {
   padding: 20px 0 0 20px;
 }
 
-#category .category .dropdown ul li a {
+#category .category-page .dropdown ul li {
+  width: 220px;
+}
+
+#category .category-page .dropdown ul li a {
   margin: 10px 0;
   display: block;
   line-height: 1;
@@ -1071,7 +1114,7 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-#category .category .dropdown ul li a:hover {
+#category .category-page .dropdown ul li a:hover {
   font-weight: bold;
   color: #ff7800;
 }
@@ -1158,41 +1201,63 @@ ul {
           box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.showmore {
-  display: none;
+#card-product .content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px 30px 40px 35px;
 }
 
-#showmore {
+#card-product .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-#showmore button {
-  background-color: transparent;
-  border: 1px solid rgba(151, 151, 151, 0.6);
-  border-radius: 4px;
-  color: rgba(51, 51, 51, 0.78);
-  font-size: 1em;
-  height: 50px;
-  width: 100%;
-  margin: 15px 0;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+#card-product .slider-for {
+  max-width: 450px;
+  height: 100%;
 }
 
-#showmore button:hover {
-  background-color: #ff7800;
+#card-product .slider-for img {
+  max-width: 450px;
+  height: 100%;
+}
+
+#card-product .slider-nav {
+  max-width: 105px;
+  height: 100%;
+  margin: 50px 0 0;
+}
+
+#card-product .slider-nav .slider__img {
+  border: 1px solid rgba(17, 17, 17, 0.274);
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+#card-product .slider-nav .slider__img img {
+  max-width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+#card-product .slider__for-box {
+  position: relative;
+  margin: 0 0 0 5px;
+}
+
+#card-product .slider__for-box .sale__attentionIcon {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  z-index: 2;
+  background-color: #ff7100;
   color: white;
+  width: 125px;
+  padding: 5px 9px;
+  border-radius: 5px;
 }
 
 #footer {

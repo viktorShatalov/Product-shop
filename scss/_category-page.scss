@@ -31,17 +31,17 @@
   }
 }
 #category {
-  .category {
+  .category-page {
     .category__items {
       padding-bottom: 30px;
       border-bottom: 3px solid rgba(151, 151, 151, 0.514);
     }
     .item {
       margin: 30px 40px 0 0;
-      width: 205px;
+      width: 220px;
       .button {
         @include transition;
-        a {
+        & > a {
           @include transition;
           &:hover {
             font-weight: bold;
@@ -55,6 +55,7 @@
       ul {
         padding: 20px 0 0 20px;
         li {
+          width: 220px;
           a {
             margin: 10px 0;
             display: block;
@@ -137,33 +138,6 @@
           @include boxShadow;
         }
       }
-    }
-  }
-}
-
-// showmore btn
-.showmore {
-  display: none;
-}
-
-#showmore {
-  @include flex;
-  align-items: center;
-  justify-content: center;
-  button {
-    background-color: transparent;
-    border: 1px solid rgba(151, 151, 151, 0.6);
-    border-radius: 4px;
-    color: $color_left_sidbar_text;
-    font-size: 1em;
-    height: 50px;
-    width: 100%;
-    margin: 15px 0;
-    cursor: pointer;
-    @include transition;
-    &:hover {
-      background-color: $color_footer-linkMenu-active;
-      color: $color_white;
     }
   }
 }

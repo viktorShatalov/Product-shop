@@ -1,0 +1,48 @@
+#card-product {
+  .content {
+    background-color: $color_white;
+    border-radius: 5px;
+    padding: 50px 30px 40px 35px;
+  }
+  .left {
+    @include flex;
+  }
+  .slider-for {
+    max-width: 450px;
+    height: 100%;
+    img {
+      max-width: 450px;
+      height: 100%;
+    }
+  }
+  .slider-nav {
+    max-width: 105px;
+    height: 100%;
+    margin: 50px 0 0;
+    .slider__img {
+      border: 1px solid rgba(17, 17, 17, 0.274);
+      border-radius: 5px;
+      margin: 5px 0;
+      img {
+        max-width: 100px;
+        height: 100px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .slider__for-box {
+    position: relative;
+    margin: 0 0 0 5px;
+    .sale__attentionIcon {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      z-index: 2;
+      background-color: $color_sale-attention;
+      color: $color_white;
+      width: 125px;
+      padding: 5px 9px;
+      border-radius: 5px;
+    }
+  }
+}

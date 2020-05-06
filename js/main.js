@@ -78,6 +78,51 @@ jQuery(document).ready(function () {
         centerMode: true,
     });
 
+    // card-product slider
+
+    jQuery('.slider-for').slick({
+        arrows: false,
+        dots: false,
+        infinite: true,
+        autoplay: false,
+        lazyLoad: "progressive",
+        asNavFor: '.slider-nav',
+        fade: true,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    centerMode: true,
+                }
+            }
+        ]
+    });
+
+
+    jQuery('.slider-nav').slick({
+        arrows: true,
+        dots: false,
+        lazyLoad: "progressive",
+        asNavFor: '.slider-for',
+        slidesToShow: 4,
+        infinite: true,
+        vertical: true,
+        autoplay: false,
+        focusOnSelect: true,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                    centerPadding: '0',
+                }
+            }
+        ]
+    });
+
     // filtr
     jQuery.easing.def = "easeInOutQuad";
     jQuery('li.button a').click(function (e) {
