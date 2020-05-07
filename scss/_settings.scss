@@ -239,6 +239,44 @@ ul {
     }
   }
 }
+
+.slider_recomend,
+.slider_similar,
+.slider_related {
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $color_slider_arows;
+    cursor: pointer;
+  }
+  .slick-prev {
+    right: -50px;
+    &::before {
+      content: url(../img/icon/arrow_next_saleSlider.png);
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+    }
+  }
+  .slick-next {
+    left: -50px;
+    &::before {
+      content: url(../img/icon/arrow_prew_saleSlider.png);
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+    }
+  }
+}
 // breadcumbs
 #breadcumbs {
   margin-bottom: 30px;

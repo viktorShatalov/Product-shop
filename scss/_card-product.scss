@@ -86,7 +86,7 @@
       }
       .product__price {
         font-family: "Gilroy-Regular";
-        display: flex;
+        @include flex;
         justify-content: space-between;
         .strikeout__price {
           margin-bottom: 5px;
@@ -153,7 +153,7 @@
   .characteristics {
     flex: 1 1 50%;
     .tabs {
-      display: flex;
+      @include flex;
       li {
         padding: 18px 19px 16px;
         font-size: 0.9em;
@@ -240,6 +240,113 @@
     }
     li {
       margin: 10px 0;
+    }
+  }
+}
+
+// recomends
+#recomends {
+  margin: 50px auto 80px;
+  .tabs {
+    @include flex;
+    li {
+      padding: 18px 19px 16px;
+      font-size: 0.9em;
+      font-weight: bold;
+      background-color: $color_tabs;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-right: 5px;
+      border: 1px solid rgba(17, 17, 17, 0.274);
+      z-index: 1;
+      cursor: pointer;
+      letter-spacing: 1px;
+      a {
+        color: $color_tabs_link;
+        @include transition;
+      }
+      &:hover a {
+        color: inherit;
+      }
+      &.uk-active a {
+        color: $color_footer-linkMenu-active;
+      }
+      &.uk-active {
+        background-color: $color_white;
+        border: none;
+      }
+      #reviews__count {
+        &::before {
+          content: "•";
+        }
+      }
+    }
+  }
+  #recomends__tabs {
+    .slider_recomend,
+    .slider_similar,
+    .slider_related {
+      background-color: $color_white;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 20px 0;
+      .slider__item {
+        width: 145px;
+        margin: 0 20px;
+        .item__img {
+          width: 135px;
+          height: 165px;
+          object-fit: cover;
+          margin: 0 auto;
+        }
+      }
+      .item__name {
+        text-align: center;
+        margin: 20px 0;
+        span {
+          font-size: 0.75em;
+          color: $color_left_sidbar_text;
+        }
+      }
+      .item__price {
+        font-weight: bold;
+        text-align: center;
+        color: $color_left_sidbar_text;
+      }
+      .add-to-cart {
+        button {
+          width: 55px;
+          padding: 5px 3px;
+          @include cart-btn;
+          background-color: $color_bg_header-bottom__row;
+          border-radius: 5px;
+          position: relative;
+          transform: translate(80%, 0);
+          margin: 20px 0;
+          img {
+            width: 28px;
+            height: 25px;
+            transform: translateX(7px);
+          }
+          &::before,
+          &::after {
+            content: "";
+            width: 11px;
+            height: 2px;
+            background-color: $color_white;
+            position: absolute;
+            top: 45%;
+            left: 8px;
+          }
+          &::after {
+            transform: rotate(90deg);
+          }
+          &:hover {
+            @include hvrOpacity;
+          }
+        }
+      }
     }
   }
 }

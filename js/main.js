@@ -123,6 +123,28 @@ jQuery(document).ready(function () {
         ]
     });
 
+    // card-product slider tabs
+    jQuery('.slider_recomend,.slider_related,.slider_similar').slick({
+        arrows: true,
+        dots: false,
+        lazyLoad: "progressive",
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                    centerPadding: '0',
+                }
+            }
+        ]
+    });
+
+
     // filtr
     jQuery.easing.def = "easeInOutQuad";
     jQuery('li.button a').click(function (e) {

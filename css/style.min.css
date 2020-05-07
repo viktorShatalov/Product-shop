@@ -316,6 +316,59 @@ ul {
           transform: translateX(-50%);
 }
 
+.slider_recomend .slick-prev,
+.slider_recomend .slick-next,
+.slider_similar .slick-prev,
+.slider_similar .slick-next,
+.slider_related .slick-prev,
+.slider_related .slick-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+  color: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff7303;
+  cursor: pointer;
+}
+
+.slider_recomend .slick-prev,
+.slider_similar .slick-prev,
+.slider_related .slick-prev {
+  right: -50px;
+}
+
+.slider_recomend .slick-prev::before,
+.slider_similar .slick-prev::before,
+.slider_related .slick-prev::before {
+  content: url(../img/icon/arrow_next_saleSlider.png);
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slider_recomend .slick-next,
+.slider_similar .slick-next,
+.slider_related .slick-next {
+  left: -50px;
+}
+
+.slider_recomend .slick-next::before,
+.slider_similar .slick-next::before,
+.slider_related .slick-next::before {
+  content: url(../img/icon/arrow_prew_saleSlider.png);
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 #breadcumbs {
   margin-bottom: 30px;
   font-size: 0.785em;
@@ -533,7 +586,7 @@ ul {
   width: 1225px;
   background-color: #ffe3cd;
   position: absolute;
-  top: 46px;
+  top: 48px;
   left: 0;
   font-size: 0.7em;
 }
@@ -1335,6 +1388,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1430,6 +1485,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #card-product .reviews__tabs .tabs li,
@@ -1542,6 +1599,159 @@ ul {
 
 #card-product .characteristics li {
   margin: 10px 0;
+}
+
+#recomends {
+  margin: 50px auto 80px;
+}
+
+#recomends .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#recomends .tabs li {
+  padding: 18px 19px 16px;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: #e3e3e3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: 5px;
+  border: 1px solid rgba(17, 17, 17, 0.274);
+  z-index: 1;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+#recomends .tabs li a {
+  color: #969b97;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#recomends .tabs li:hover a {
+  color: inherit;
+}
+
+#recomends .tabs li.uk-active a {
+  color: #ff7800;
+}
+
+#recomends .tabs li.uk-active {
+  background-color: white;
+  border: none;
+}
+
+#recomends .tabs li #reviews__count::before {
+  content: "•";
+}
+
+#recomends #recomends__tabs .slider_recomend,
+#recomends #recomends__tabs .slider_similar,
+#recomends #recomends__tabs .slider_related {
+  background-color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px 0;
+}
+
+#recomends #recomends__tabs .slider_recomend .slider__item,
+#recomends #recomends__tabs .slider_similar .slider__item,
+#recomends #recomends__tabs .slider_related .slider__item {
+  width: 145px;
+  margin: 0 20px;
+}
+
+#recomends #recomends__tabs .slider_recomend .slider__item .item__img,
+#recomends #recomends__tabs .slider_similar .slider__item .item__img,
+#recomends #recomends__tabs .slider_related .slider__item .item__img {
+  width: 135px;
+  height: 165px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+#recomends #recomends__tabs .slider_recomend .item__name,
+#recomends #recomends__tabs .slider_similar .item__name,
+#recomends #recomends__tabs .slider_related .item__name {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#recomends #recomends__tabs .slider_recomend .item__name span,
+#recomends #recomends__tabs .slider_similar .item__name span,
+#recomends #recomends__tabs .slider_related .item__name span {
+  font-size: 0.75em;
+  color: rgba(51, 51, 51, 0.78);
+}
+
+#recomends #recomends__tabs .slider_recomend .item__price,
+#recomends #recomends__tabs .slider_similar .item__price,
+#recomends #recomends__tabs .slider_related .item__price {
+  font-weight: bold;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.78);
+}
+
+#recomends #recomends__tabs .slider_recomend .add-to-cart button,
+#recomends #recomends__tabs .slider_similar .add-to-cart button,
+#recomends #recomends__tabs .slider_related .add-to-cart button {
+  width: 55px;
+  padding: 5px 3px;
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ff7303;
+  border-radius: 5px;
+  position: relative;
+  -webkit-transform: translate(80%, 0);
+          transform: translate(80%, 0);
+  margin: 20px 0;
+}
+
+#recomends #recomends__tabs .slider_recomend .add-to-cart button img,
+#recomends #recomends__tabs .slider_similar .add-to-cart button img,
+#recomends #recomends__tabs .slider_related .add-to-cart button img {
+  width: 28px;
+  height: 25px;
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+#recomends #recomends__tabs .slider_recomend .add-to-cart button::before, #recomends #recomends__tabs .slider_recomend .add-to-cart button::after,
+#recomends #recomends__tabs .slider_similar .add-to-cart button::before,
+#recomends #recomends__tabs .slider_similar .add-to-cart button::after,
+#recomends #recomends__tabs .slider_related .add-to-cart button::before,
+#recomends #recomends__tabs .slider_related .add-to-cart button::after {
+  content: "";
+  width: 11px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 45%;
+  left: 8px;
+}
+
+#recomends #recomends__tabs .slider_recomend .add-to-cart button::after,
+#recomends #recomends__tabs .slider_similar .add-to-cart button::after,
+#recomends #recomends__tabs .slider_related .add-to-cart button::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#recomends #recomends__tabs .slider_recomend .add-to-cart button:hover,
+#recomends #recomends__tabs .slider_similar .add-to-cart button:hover,
+#recomends #recomends__tabs .slider_related .add-to-cart button:hover {
+  opacity: 0.7;
 }
 
 #footer {
