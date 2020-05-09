@@ -53,17 +53,17 @@
           <div class="category">
             <div class="category__box-menu">
               <ul class="category__menu-items">
-                <li data-filter=".item1">Категория простая</li>
-                <li data-filter=".item2">Выделенная категория</li>
-                <li data-filter=".item3">Категория с длинным названием в две строки</li>
-                <li data-filter=".item4">Категория простая</li>
-                <li data-filter=".item5">Категория простая</li>
-                <li data-filter=".item6">Категория простая</li>
-                <li data-filter=".item7">Категория простая</li>
-                <li data-filter=".item8">Категория простая</li>
-                <li data-filter=".item9">Категория простая</li>
-                <li data-filter=".item10">Категория простая</li>
-                <li data-filter=".item11">Категория простая</li>
+                <li data-filter=".item1"><a href="#">Категория простая</a></li>
+                <li data-filter=".item2"><a href="#">Выделенная категория</a></li>
+                <li data-filter=".item3"><a href="#">Категория с длинным названием в две строки</a></li>
+                <li data-filter=".item4"><a href="#">Категория простая</a></li>
+                <li data-filter=".item5"><a href="#">Категория простая</a></li>
+                <li data-filter=".item6"><a href="#">Категория простая</a></li>
+                <li data-filter=".item7"><a href="#">Категория простая</a></li>
+                <li data-filter=".item8"><a href="#">Категория простая</a></li>
+                <li data-filter=".item9"><a href="#">Категория простая</a></li>
+                <li data-filter=".item10"><a href="#">Категория простая</a></li>
+                <li data-filter=".item11"><a href="#">Категория простая</a></li>
               </ul>
               <div class="box__sub-menu">
                 <div class="category__sub-menu item1">
@@ -344,302 +344,67 @@
   </header>
   <!-- main -->
   <main>
-    <div id="category">
+    <section id="cart">
       <div class="conteiner m-auto">
-        <div class="content">
-          <div class="left__sidebar">
-            <!--link to back -->
-            <div class="link__back">
-              <a href="#">Назад</a>
+        <div class="back__to">
+          <a href="#">Продолжить покупки</a>
+        </div>
+        <div class="head">
+          <h1>
+            Корзина
+          </h1>
+          <a href="#">Распечатать страницу</a>
+        </div>
+        <div class="step__name-dreadcumbs">
+          <ul>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+            <li>
+              <a href="#">Оплата</a>
+            </li>
+            <li>
+              <a href="#">Спасибо!</a>
+            </li>
+        </div>
+        <div class="cart__content">
+          <div class="cart__items">
+            <div class="cart_item"></div>
+            <div class="cart_item"></div>
+            <div class="cart_item"></div>
+          </div>
+          <div class="add__coupon">
+            <div class="coupon__description">
+              <label class="coupon_code-label" for="coupon_code">Промокод</label>
+              <div class="coupon__action">
+                <input type="text" name="coupon_code" id="coupon_code" placeholder="Введите код">
+                <button type="submit" name="apply_coupon">Применить</button>
+              </div>
             </div>
-            <!-- category -->
-            <div class="category-page">
-              <ul class="category__items">
-                <li class="item">
-                  <ul>
-                    <li class="button active"><a href="#">Категория простая</a></li>
-                    <li class="dropdown">
-                      <ul>
-                        <li><a href="#">Подкатегория</a></li>
-                        <li><a href="#">Подкатегория с очень длинным названием</a></li>
-                        <li><a href="#">Подкатегория с длинным названием</a></li>
-                        <li><a href="#">Подкатегория</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <ul>
-                    <li class="button"><a href="#">Категория с длинным названием в две строки</a></li>
-                    <li class="dropdown">
-                      <ul>
-                        <li><a href="#">Подкатегория</a></li>
-                        <li><a href="#">Подкатегория с очень длинным названием</a></li>
-                        <li><a href="#">Подкатегория с длинным названием</a></li>
-                        <li><a href="#">Подкатегория</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <ul>
-                    <li class="button"><a href="#">Выделенная категория</a></li>
-                    <li class="dropdown">
-                      <ul>
-                        <li><a href="#">Подкатегория</a></li>
-                        <li><a href="#">Подкатегория с очень длинным названием</a></li>
-                        <li><a href="#">Подкатегория с длинным названием</a></li>
-                        <li><a href="#">Подкатегория</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <ul>
-                    <li class="button"><a href="#">Категория простая</a></li>
-                    <li class="dropdown">
-                      <ul>
-                        <li><a href="#">Подкатегория</a></li>
-                        <li><a href="#">Подкатегория с очень длинным названием</a></li>
-                        <li><a href="#">Подкатегория с длинным названием</a></li>
-                        <li><a href="#">Подкатегория</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <ul>
-                    <li class="button"><a href="#">Категория простая</a></li>
-                    <li class="dropdown">
-                      <ul>
-                        <li><a href="#">Подкатегория</a></li>
-                        <li><a href="#">Подкатегория с очень длинным названием</a></li>
-                        <li><a href="#">Подкатегория с длинным названием</a></li>
-                        <li><a href="#">Подкатегория</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <ul>
-                    <li class="button"><a href="#">Категория простая</a></li>
-                    <li class="dropdown">
-                      <ul>
-                        <li><a href="#">Подкатегория</a></li>
-                        <li><a href="#">Подкатегория с очень длинным названием</a></li>
-                        <li><a href="#">Подкатегория с длинным названием</a></li>
-                        <li><a href="#">Подкатегория</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <!-- filtr -->
-            <div class="filtr">
-              <h5>Фильтр</h5>
-              <div class="type__of">
-                <p>Тип продукта</p>
-                <ul class="filtr__items">
-                  <li>
-                    <label for="check1">
-                      <input type="checkbox" checked name="check1" id="check1">
-                      Тип продукта №1
-                    </label>
-                  </li>
-                  <li>
-                    <label for="check2">
-                      <input type="checkbox" name="check2" id="check2">
-                      Тип продукта №1
-                    </label>
-                  </li>
-                  <li>
-                    <label for="check3">
-                      <input type="checkbox" name="check3" id="check3">
-                      Тип продукта №1
-                    </label>
-                  </li>
-                  <li>
-                    <label for="check4">
-                      <input type="checkbox" name="check4" id="check4">
-                      Тип продукта №1
-                    </label>
-                  </li>
-                </ul>
+            <div class="order-total">
+              <div class="total-box">
+                <p>
+                  Итого:
+                </p>
+                <span>
+                  <strong>
+                    <span class="amount">3500.00</span> ₽
+                  </strong>
+                </span>
+              </div>
+              <div class="order-total_description">
+                <p>
+                  Общая стоимость,<br> без учёта доставки
+                </p>
               </div>
             </div>
           </div>
-          <div class="right__content">
-            <!-- breadcumps -->
-            <div id="breadcumbs">
-              <ul class="conteiner">
-                <li>
-                  <a href="#">Главная</a>
-                </li>
-                <li>
-                  <a href="#">next page</a>
-                </li>
-                <li>
-                  <a href="#">next page</a>
-                </li>
-              </ul>
-            </div>
-            <!-- content -->
-            <div class="name__of__category">
-              <p>
-                Раскрытая категория товара
-              </p>
-            </div>
-            <!-- sort -->
-            <div class="sorting">
-              <legend>
-                Упорядочить
-                <select name="sort__product" id="sort__product">
-                  <option selected value="1">По популярности</option>
-                  <option value="2">По возрастанию цены</option>
-                </select>
-              </legend>
-              <legend>
-                Показать на странице
-                <select name="page__count" id="page__count">
-                  <option selected value="1">30</option>
-                  <option value="2">20</option>
-                  <option value="3">10</option>
-                </select>
-              </legend>
-            </div>
-            <div class="product__items">
-              <ul>
-                <li>
-                  <a href="#">
-                    <div class="sale__product-card">
-                      <div class="card__img">
-                        <img src="img/slider/product_img.png" alt="ТОвары со скидкой">
-                      </div>
-                      <div class="card__name">
-                        <h3>
-                          Вот здесь название<br> товара максимум в три строчки
-                        </h3>
-                      </div>
-                      <div class="card__footer">
-                        <div>
-                          <div class="strikeout__price">
-                            <p>
-                              <span>777,77</span>₽
-                            </p>
-                          </div>
-                          <div class="current__price">
-                            <p>
-                              <span>707,77</span>₽
-                            </p>
-                          </div>
-                        </div>
-                        <div class="addToCart">
-                          <div class="itemOfGoods">
-                            <p>
-                              Арт.<span>7070707</span>
-                            </p>
-                          </div>
-                          <button type="submit" name="add__cart-btn" class="addCart__btn">
-                            <img src="img/icon/noun_cart.png" alt="Купить товар на дом">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="sale__product-card">
-                      <div class="card__img">
-                        <img src="img/slider/product_img.png" alt="ТОвары со скидкой">
-                      </div>
-                      <div class="card__name">
-                        <h3>
-                          Вот здесь название<br> товара максимум в три строчки
-                        </h3>
-                      </div>
-                      <div class="card__footer">
-                        <div>
-                          <div class="strikeout__price">
-                            <p>
-                              <span>777,77</span>₽
-                            </p>
-                          </div>
-                          <div class="current__price">
-                            <p>
-                              <span>707,77</span>₽
-                            </p>
-                          </div>
-                        </div>
-                        <div class="addToCart">
-                          <div class="itemOfGoods">
-                            <p>
-                              Арт.<span>7070707</span>
-                            </p>
-                          </div>
-                          <button type="submit" name="add__cart-btn" class="addCart__btn">
-                            <img src="img/icon/noun_cart.png" alt="Купить товар на дом">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="sale__product-card">
-                      <div class="card__img">
-                        <img src="img/slider/product_img.png" alt="ТОвары со скидкой">
-                      </div>
-                      <div class="card__name">
-                        <h3>
-                          Вот здесь название<br> товара максимум в три строчки
-                        </h3>
-                      </div>
-                      <div class="card__footer">
-                        <div>
-                          <div class="strikeout__price">
-                            <p>
-                              <span>777,77</span>₽
-                            </p>
-                          </div>
-                          <div class="current__price">
-                            <p>
-                              <span>707,77</span>₽
-                            </p>
-                          </div>
-                        </div>
-                        <div class="addToCart">
-                          <div class="itemOfGoods">
-                            <p>
-                              Арт.<span>7070707</span>
-                            </p>
-                          </div>
-                          <button type="submit" name="add__cart-btn" class="addCart__btn">
-                            <img src="img/icon/noun_cart.png" alt="Купить товар на дом">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                
-              </ul>
-            </div>
-            <div id="pagination">
-              <ul>
-                <li><a href="#" class="active">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-          </div>
+        </div>
+        <div class="back__to m-top">
+          <a href="#">Продолжить покупки</a>
         </div>
       </div>
-    </div>
+    </section>
   </main>
   <!-- footer -->
   <footer id="footer">

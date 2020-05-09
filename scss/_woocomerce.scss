@@ -1,0 +1,110 @@
+.price {
+  @include flex;
+  flex-direction: column;
+  del {
+    margin-bottom: 10px;
+    .amount {
+      font-size: 0.785em;
+      color: $color_card__product-text;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+  ins {
+    .amount {
+      color: $color_bg_header-bottom__row;
+      font-weight: bold;
+      font-family: "Gilroy-Medium";
+    }
+  }
+}
+.added_to_cart {
+  position: absolute !important;
+  left: -70px;
+  font-size: 12px;
+  bottom: -5px;
+  background-color: rgba(0, 128, 0, 0.85) !important;
+  padding: 8px 3px;
+  color: $color_white;
+}
+.add-to-cart {
+  .added_to_cart {
+    padding: 18px 4px !important;
+    left: -83px;
+    bottom: 47px;
+    &::after,
+    &::before {
+      content: none !important;
+    }
+  }
+}
+
+// cart
+
+.cart {
+  thead {
+    display: none;
+  }
+  .cart_item {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color_white;
+    padding: 28px 10px;
+    border-bottom: 1px solid $color_cart_border-item;
+    &:first-child {
+      border-top: 2px solid $color_cart_attribute;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    td {
+      padding: 0 7px;
+    }
+    .product-remove {
+      a {
+        font-size: 40px;
+        color: $color_cart_attribute;
+      }
+    }
+    .product-thumbnail {
+      border: 1px solid $color_cart_attribute;
+      padding: 5px;
+      a img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+    }
+    .product-name {
+      a {
+        display: block;
+        width: 100%;
+        max-width: 380px;
+        color: $color_category-menu_text;
+        font-size: 1.125em;
+        font-weight: bold;
+      }
+    }
+    .product-price {
+      font-size: 1.25em;
+      span {
+        color: $color_category-menu_text;
+      }
+    }
+    .product-quantity {
+      .screen-reader-text {
+        display: none;
+      }
+      input[type="number"] {
+        width: 50px;
+        height: 30px;
+        font-size: 1.25em;
+        text-align: center;
+      }
+    }
+  }
+}
+.cart-subtotal {
+  display: none;
+}

@@ -41,12 +41,16 @@
       width: 220px;
       .button {
         @include transition;
-        & > a {
+        a {
           @include transition;
           &:hover {
             font-weight: bold;
             color: $color_footer-linkMenu-active;
           }
+        }
+        &::after,
+        &::before {
+          content: "";
         }
       }
     }
@@ -75,7 +79,7 @@
     h5 {
       font-size: 1em;
       color: $color_category-menu_text;
-      display: flex;
+      @include flex;
       margin: 0 0 15px;
       &::before {
         content: url(../img/icon/filtr__icon.png);
@@ -115,30 +119,32 @@
       }
     }
     .sorting {
-      display: flex;
+      @include flex;
       font-size: 0.785em;
       margin-bottom: 40px;
       legend {
-        margin-right: 20px;
         color: $color_text-description;
       }
       select {
         border: 1px solid $color_text-description;
         margin-left: 5px;
+        margin-right: 5px;
       }
     }
     .product__items {
       ul {
         @include flex;
-        justify-content: space-between;
-        .sale__product-card {
-          box-shadow: none;
-          border: 1px solid rgba(151, 151, 151, 0.6);
-          width: 270px;
-          margin: 0 auto 25px;
-          @include transition;
-          &:hover {
-            @include boxShadow;
+        li {
+          margin: 0 auto;
+          .sale__product-card {
+            box-shadow: none;
+            border: 1px solid rgba(151, 151, 151, 0.6);
+            width: 270px;
+            margin: 0 5px 25px;
+            @include transition;
+            &:hover {
+              @include boxShadow;
+            }
           }
         }
       }

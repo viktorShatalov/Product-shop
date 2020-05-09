@@ -128,7 +128,7 @@ jQuery(document).ready(function () {
         arrows: true,
         dots: false,
         lazyLoad: "progressive",
-        infinite: true,
+        infinite: false,
         slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
@@ -151,18 +151,8 @@ jQuery(document).ready(function () {
         var dropDown = jQuery(this).parent().next();
         jQuery('.dropdown').not(dropDown).slideUp('slow');
         dropDown.slideToggle('slow');
-        e.preventDefault();
+        e.preventDefault()
     })
-    // loadMore
-
-    jQuery('#showmore button').click(function () {
-        if (jQuery(".showmore").is(":hidden")) {
-            jQuery(".showmore").show("slow");
-            jQuery("#showmore button").prop('disabled', true);
-        } else {
-            jQuery(".showmore").slideUp();
-        }
-    });
 
 })
 
