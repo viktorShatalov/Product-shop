@@ -311,7 +311,7 @@
       }
       .item__name {
         text-align: center;
-        margin: 20px 0;
+        margin: 20px 0 10px;
         span {
           font-size: 0.75em;
           color: $color_left_sidbar_text;
@@ -323,19 +323,22 @@
         color: $color_left_sidbar_text;
       }
       .add-to-cart {
-        button {
+        position: relative;
+        button,
+        a {
           width: 55px;
           padding: 5px 3px;
           @include cart-btn;
           background-color: $color_bg_header-bottom__row;
           border-radius: 5px;
           position: relative;
-          transform: translate(80%, 0);
-          margin: 20px 0;
+          transform: translate(70%, 0);
+          margin: 40px 0 20px;
+          display: block;
           img {
             width: 28px;
             height: 25px;
-            transform: translateX(7px);
+            transform: translateX(18px);
           }
           &::before,
           &::after {

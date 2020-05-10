@@ -38,6 +38,21 @@
     }
   }
 }
+.sale__product-slider {
+  .added_to_cart {
+    bottom: -15px !important;
+  }
+}
+.slider_recomend,
+.slider_similar,
+.slider_related {
+  .added_to_cart {
+    font-size: 8px !important;
+    padding: 13px 4px !important;
+    left: 0 !important;
+    bottom: 18px !important;
+  }
+}
 
 // cart
 
@@ -50,7 +65,9 @@
     align-items: center;
     justify-content: space-between;
     background-color: $color_white;
-    padding: 28px 10px;
+    padding: 28px 0;
+    width: 100%;
+    max-width: 780px;
     border-bottom: 1px solid $color_cart_border-item;
     &:first-child {
       border-top: 2px solid $color_cart_attribute;
@@ -58,10 +75,20 @@
     &:last-child {
       border-bottom: none;
     }
-    td {
-      padding: 0 7px;
+    .cart_item-box {
+      @include flex;
+      align-items: center;
+      padding: 0 10px;
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex-direction: column;
+      }
+      &:nth-child(2) {
+        align-items: baseline;
+      }
     }
     .product-remove {
+      margin: 0 20px;
       a {
         font-size: 40px;
         color: $color_cart_attribute;
@@ -77,6 +104,7 @@
       }
     }
     .product-name {
+      margin-bottom: 30px;
       a {
         display: block;
         width: 100%;
@@ -92,19 +120,237 @@
         color: $color_category-menu_text;
       }
     }
-    .product-quantity {
+    .product-subtotal {
+      color: $color_cart_text;
+    }
+    .itemOfGoods,
+    .weigth {
+      p {
+        color: $color_cart_text;
+      }
+    }
+    .quantity {
+      margin-top: 10px;
       .screen-reader-text {
         display: none;
       }
       input[type="number"] {
-        width: 50px;
+        width: 30px;
         height: 30px;
         font-size: 1.25em;
         text-align: center;
       }
+      /* Для Chrome */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+      /* Для Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      .quantity-arrow-plus,
+      .quantity-arrow-minus {
+        background-color: transparent;
+        @include transition;
+        font-size: 1.25em;
+        cursor: pointer;
+        width: 30px;
+        height: 35px;
+        border-radius: 4px;
+        &:hover {
+          background-color: $color_footer-linkMenu-active;
+          color: $color_white;
+        }
+      }
     }
   }
 }
-.cart-subtotal {
+.cart-subtotal,
+#billing_country_field {
   display: none;
+}
+
+// notices-wrapper
+.woocommerce-notices-wrapper {
+  position: absolute;
+  transform: translate(50%, 20px);
+  color: $color_white;
+  .restore-item {
+    color: $color_white;
+  }
+}
+
+// coment form
+#respond {
+  & > * {
+    color: $color_card_name;
+  }
+}
+
+// settings
+.comment-form {
+  background-color: $color_step_bg;
+  color: $color_category-menu_text;
+  padding: 20px;
+  border-radius: 5px;
+  input[type="submit"] {
+    padding: 0 20px;
+    height: 40px;
+    background-color: $color_footer-subscribe-btn;
+    font-size: 0.8em;
+    color: $color_white;
+    @include transition;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color_white;
+      color: $color_footer-subscribe-btn;
+    }
+  }
+  input {
+    font-size: 1.35em;
+    color: $color_cart_text;
+    border-bottom: 1px solid $color_cart_attribute;
+    width: 190px;
+    color: $color_cart_text;
+    background-color: transparent;
+    padding: 0 10px;
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    max-width: 320px;
+    height: 140px;
+    border: 1px solid $color_cart_attribute;
+    font-size: 1em;
+    padding: 10px;
+    color: $color_text-description;
+    font-family: "Gilroy-medium";
+    border-radius: 4px;
+  }
+}
+.woocommerce {
+  background: $color_bg-main;
+  .cart-empty,
+  .return-to-shop {
+    color: $color_white;
+    font-size: 1.25em;
+    margin: 0 auto;
+    max-width: $widthContent;
+    padding: 20px 45px;
+    font-weight: bold;
+  }
+  .return-to-shop {
+    a {
+      font-size: 1em;
+      color: $color_white;
+      font-weight: normal;
+    }
+  }
+  h2 {
+    padding: 0;
+    color: $color_card_name;
+    &::after,
+    &::before {
+      content: none !important;
+    }
+  }
+  form {
+    color: $color_category-menu_text;
+    padding: 20px 0;
+    border-radius: 5px;
+  }
+}
+.page {
+  background: $color_bg-main;
+  padding: 20px 60px;
+  .entry-title {
+    padding: 0 0 25px;
+  }
+}
+.entry-content,
+.entry-header {
+  max-width: $widthContent;
+  margin: 0 auto;
+  .woocommerce {
+    background-image: none;
+  }
+}
+.entry-content {
+  background-color: $color_white;
+  border-radius: 5px;
+  padding: 20px;
+  button {
+    padding: 0 20px;
+    height: 40px;
+    background-color: $color_footer-subscribe-btn;
+    font-size: 1em;
+    color: $color_white;
+    @include transition;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color_white;
+      color: $color_footer-subscribe-btn;
+    }
+  }
+  h3 {
+    color: $color_footer-linkMenu-active;
+    font-size: 1.5em;
+    padding: 10px 0;
+  }
+  p {
+    margin: 10px 0;
+    color: $color_category-menu_text;
+  }
+  label {
+    color: $color_category-menu_text;
+    font-weight: bold;
+    font-size: 1.125em;
+  }
+  input {
+    font-size: 1.35em;
+    color: $color_cart_text;
+    border-bottom: 1px solid $color_cart_attribute;
+    width: 190px;
+    color: $color_cart_text;
+    background-color: transparent;
+    padding: 0 10px;
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    max-width: 320px;
+    height: 140px;
+    border: 1px solid $color_cart_attribute;
+    font-size: 1em;
+    padding: 10px;
+    color: $color_text-description;
+    font-family: "Gilroy-medium";
+    border-radius: 4px;
+  }
+  input[type="checkbox"] {
+    width: inherit;
+  }
+  span {
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+  .select2-selection__rendered {
+    font-size: 1.25rem;
+  }
+  .notes {
+    @include flex;
+    flex-direction: column;
+  }
+}
+
+.lost_password {
+  a {
+    color: $color_footer-linkMenu-active;
+  }
 }

@@ -344,7 +344,7 @@
   </header>
   <!-- main -->
   <main>
-    <section id="cart">
+    <section id="cart" class="cart">
       <div class="conteiner m-auto">
         <div class="back__to">
           <a href="#">Продолжить покупки</a>
@@ -369,9 +369,44 @@
         </div>
         <div class="cart__content">
           <div class="cart__items">
-            <div class="cart_item"></div>
-            <div class="cart_item"></div>
-            <div class="cart_item"></div>
+            <div class="cart_item">
+              <div class="cart_item-box">
+                <div class="product-remove">
+                  <a href="#">&times;</a>
+                </div>
+                <div class="product-thumbnail">
+                  <a href="#">
+                    <img src="img/product/img.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="cart_item-box">
+                <div class="product-name">
+                  <a href="#">Чай Greenfield Kenyan Sunrise черный 100 пакетиков по 2 г</a>
+                </div>
+                <div>
+                  <div class="itemOfGoods">
+                    <p>Артикул <span>25390687</span></p>
+                  </div>
+                  <div class="weigth">
+                    <p>Вес: <span>75 г</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="cart_item-box">
+                <div class="product-price">
+                  <span>250</span> ₽
+                </div>
+                <div class="product-subtotal">
+                  <span>250</span> ₽
+                </div>
+                <div class="quantity">
+                  <button class="quantity-arrow-minus">-</button>
+                  <input type="number" class="input-text qty text" value="1">
+                  <button class="quantity-arrow-plus">+</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="add__coupon">
             <div class="coupon__description">
