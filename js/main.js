@@ -156,28 +156,29 @@ jQuery(document).ready(function () {
 
     // cart-item counter
 
-    $(function () {
+    // function addHandlers(count) {
 
-        (function quantityProducts() {
-            var $quantityArrowMinus = $(".quantity-arrow-minus");
-            var $quantityArrowPlus = $(".quantity-arrow-plus");
-            var $quantityNum = $(".qty");
+    //     let minus = count.querySelector("#quantity-arrow-minus");
+    //     let number = count.querySelector(".qty");
+    //     let plus = count.querySelector("#quantity-arrow-plus");
 
-            $quantityArrowMinus.click(quantityMinus);
-            $quantityArrowPlus.click(quantityPlus);
+    //     plus.addEventListener("click", function () {
+    //         +number.value++;
+    //     });
 
-            function quantityMinus() {
-                if ($quantityNum.val() > 1) {
-                    $quantityNum.val(+$quantityNum.val() - 1);
-                }
-            }
+    //     minus.addEventListener("click", function () {
+    //         +number.value--;
+    //         if (number.value == 0) {
+    //             minus.disabled = true;
+    //         }
+    //         else {
+    //             minus.disabled = false;
+    //         }
+    //     });
+    // }
 
-            function quantityPlus() {
-                $quantityNum.val(+$quantityNum.val() + 1);
-            }
-        })();
-
-    });
+    // let counts = document.querySelectorAll(".product-quantity");
+    // counts.forEach(addHandlers);
 
 })
 

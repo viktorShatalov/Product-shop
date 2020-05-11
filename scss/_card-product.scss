@@ -30,7 +30,7 @@
     .slider__img {
       border: 1px solid rgba(17, 17, 17, 0.274);
       border-radius: 5px;
-      margin: 5px 0;
+      margin: 3.33333px 0;
       img {
         max-width: 100px;
         height: 100px;
@@ -325,7 +325,7 @@
       .add-to-cart {
         position: relative;
         button,
-        a {
+        .button {
           width: 55px;
           padding: 5px 3px;
           @include cart-btn;

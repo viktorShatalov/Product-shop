@@ -2,7 +2,7 @@
   .conteiner {
     background-color: $color_white;
     border-radius: 5px;
-    padding: 25px 10px;
+    padding: 25px 20px;
     max-width: 1225px;
   }
   .back__to {
@@ -36,7 +36,7 @@
   }
   .step__name-dreadcumbs {
     background-color: $color_step_bg;
-    margin: 0 -10px 38px;
+    margin: 0 -20px 38px;
     padding: 0 85px;
     ul {
       @include flex;

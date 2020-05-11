@@ -56,7 +56,7 @@
 
 // cart
 
-.cart {
+#cart {
   thead {
     display: none;
   }
@@ -140,34 +140,48 @@
         font-size: 1.25em;
         text-align: center;
       }
-      /* Для Chrome */
-      input[type="number"]::-webkit-inner-spin-button,
-      input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        margin: 0;
-      }
-      /* Для Firefox */
-      input[type="number"] {
-        -moz-appearance: textfield;
-      }
-      .quantity-arrow-plus,
-      .quantity-arrow-minus {
-        background-color: transparent;
-        @include transition;
-        font-size: 1.25em;
-        cursor: pointer;
-        width: 30px;
-        height: 35px;
-        border-radius: 4px;
-        &:hover {
-          background-color: $color_footer-linkMenu-active;
-          color: $color_white;
-        }
-      }
+      // /* Для Chrome */
+      // input[type="number"]::-webkit-inner-spin-button,
+      // input[type="number"]::-webkit-outer-spin-button {
+      //   -webkit-appearance: none;
+      //   -moz-appearance: none;
+      //   appearance: none;
+      //   margin: 0;
+      // }
+      // /* Для Firefox */
+      // input[type="number"] {
+      //   -moz-appearance: textfield;
+      // }
     }
   }
+}
+.product-quantity {
+  position: relative;
+}
+#quantity-arrow-plus,
+#quantity-arrow-minus {
+  position: absolute;
+  background-color: transparent;
+  @include transition;
+  font-size: 1.25em;
+  cursor: pointer;
+  width: 30px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: transparent;
+  top: 5px;
+  color: $color_card__product-text;
+  &:hover {
+    background-color: $color_footer-linkMenu-active;
+    color: $color_white;
+  }
+}
+#quantity-arrow-minus {
+  left: -30px;
+}
+#quantity-arrow-plus {
+  right: -30px;
+  top: 7px;
 }
 .cart-subtotal,
 #billing_country_field {
@@ -353,4 +367,47 @@
   a {
     color: $color_footer-linkMenu-active;
   }
+}
+.woocommerce-checkout-review-order-table {
+  @include flex;
+  .cart_item,
+  .totall {
+    border: 1px solid $color_cart_attribute;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0;
+  }
+  .cart_item {
+    .product-name,
+    .product-quantity,
+    .product-total {
+      @include flex;
+      padding: 10px 0;
+      p {
+        width: 25%;
+      }
+      span {
+        width: 70%;
+      }
+    }
+  }
+  .order-total {
+    border-bottom: 2px solid $color_cart_attribute;
+    padding: 10px 0 20px;
+    p {
+      font-weight: bold;
+      color: $color_footer-linkMenu-active;
+      font-size: 1.3em;
+      span {
+        color: $color_footer-linkMenu-active;
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+  .weight {
+    padding: 10px 0 0;
+  }
+}
+.wc_payment_method {
+  margin-bottom: 20px;
 }

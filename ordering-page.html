@@ -344,16 +344,15 @@
   </header>
   <!-- main -->
   <main>
-    <section id="cart" class="cart">
+    <section id="ordering" class="cart">
       <div class="conteiner m-auto">
         <div class="back__to">
-          <a href="#">Продолжить покупки</a>
+          <a href="#">Назад к корзине</a>
         </div>
         <div class="head">
           <h1>
-            Корзина
+            Доставка
           </h1>
-          <a href="#">Распечатать страницу</a>
         </div>
         <div class="step__name-dreadcumbs">
           <ul>
@@ -368,117 +367,103 @@
             </li>
         </div>
         <div class="cart__content">
-          <div class="cart__items">
-            <div class="cart_item">
-              <div class="cart_item-box">
-                <div class="product-remove">
-                  <a href="#">&times;</a>
+          <form action="" class="checkout">
+            <div id="customer_details">
+              <legend>
+                Контактные данные
+              </legend>
+              <div class="legend__items first">
+                <div class="item">
+                  <label for="billing_first_name">Имя</label>
+                  <input type="text" name="billing_first_name" class="input-text" id="billing_first_name"
+                    placeholder="Введите имя получателя">
                 </div>
-                <div class="product-thumbnail">
-                  <a href="#">
-                    <img src="img/product/img.png" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="cart_item-box">
-                <div class="product-name">
-                  <a href="#">Чай Greenfield Kenyan Sunrise черный 100 пакетиков по 2 г</a>
-                </div>
-                <div>
-                  <div class="itemOfGoods">
-                    <p>Артикул <span>25390687</span></p>
-                  </div>
-                  <div class="weigth">
-                    <p>Вес: <span>75 г</span></p>
-                  </div>
+                <div class="item">
+                  <label for="billing_phone">Номер телефона</label>
+                  <input type="tel" name="billing_phone" class="input-text" id="billing_phone"
+                    placeholder="Введите телефон получателя">
                 </div>
               </div>
-              <div class="cart_item-box">
-                <div class="product-price">
-                  <span>250</span> ₽
+              <!-- <legend>
+                Способ получения
+              </legend> -->
+              <div class="legend__items method__delivery">
+                <div class="box">
+                  <label for="adress">Введите адрес доставки</label>
+                  <input type="text" name="adress" placeholder="Например, Краснодар, ул. Красная, д.1, стр. 1">
                 </div>
-                <div class="product-subtotal">
-                  <span>250</span> ₽
+                <div class="box">
+                  <label for="house">Дом</label>
+                  <input type="text" name="house" id="">
                 </div>
-                <div class="product-quantity">
-                  <div class=" quantity">
-                    <input type="submit" id="quantity-arrow-minus" value="-"></input>
-                    <input type="number" class="input-text qty text" value="1">
-                    <input type="submit" id="quantity-arrow-plus" value="+"></input>
-                  </div>
+                <div class="box">
+                  <label for="house_1">Корпус</label>
+                  <input type="text" name="house_1" id="">
                 </div>
-              </div>
-            </div>
-            <div class="cart_item">
-              <div class="cart_item-box">
-                <div class="product-remove">
-                  <a href="#">&times;</a>
+                <div class="box">
+                  <label for="house_2">Строение</label>
+                  <input type="text" name="house_2" id="">
                 </div>
-                <div class="product-thumbnail">
-                  <a href="#">
-                    <img src="img/product/img.png" alt="">
-                  </a>
+                <div class="box">
+                  <label for="house_3">Подъёзд</label>
+                  <input type="text" name="house_3" id="">
                 </div>
-              </div>
-              <div class="cart_item-box">
-                <div class="product-name">
-                  <a href="#">Чай Greenfield Kenyan Sunrise черный 100 пакетиков по 2 г</a>
+                <div class="box">
+                  <label for="house_4">Этаж</label>
+                  <input type="text" name="house_4" id="">
                 </div>
-                <div>
-                  <div class="itemOfGoods">
-                    <p>Артикул <span>25390687</span></p>
-                  </div>
-                  <div class="weigth">
-                    <p>Вес: <span>75 г</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="cart_item-box">
-                <div class="product-price">
-                  <span>250</span> ₽
-                </div>
-                <div class="product-subtotal">
-                  <span>250</span> ₽
-                </div>
-                <div class="product-quantity">
-                  <div class=" quantity">
-                    <input type="submit" id="quantity-arrow-minus" value="-"></input>
-                    <input type="number" class="input-text qty text" value="1">
-                    <input type="submit" id="quantity-arrow-plus" value="+"></input>
-                  </div>
+                <div class="box">
+                  <label for="house_5">Квартира</label>
+                  <input type="text" name="house_5" id="">
                 </div>
               </div>
             </div>
-          </div>
-          <div class="add__coupon">
-            <div class="coupon__description">
-              <label class="coupon_code-label" for="coupon_code">Промокод</label>
-              <div class="coupon__action">
-                <input type="text" name="coupon_code" id="coupon_code" placeholder="Введите код">
-                <button type="submit" name="apply_coupon">Применить</button>
+            <div id="order_review">
+              <h3 id="order_review_heading">Ваш заказ</h3>
+              <div class="woocommerce-checkout-review-order-table">
+                <div class="cart_item">
+                  <div class="product-name">
+                    <p>Название товара: </p>
+                    <span>Чай Greenfield Kenyan Sunrise черный 100 пакетиков по 2 г</span>
+                  </div>
+                  <div class="product-quantity">
+                    <p>
+                      Количество:
+                    </p>
+                    <span>2</span>
+                  </div>
+                  <div class="product-total">
+                    <p>Всего: </p>
+                    <span>500 ₽</span>
+                  </div>
+                </div>
+                <div class="totall">
+                  <div class="order-total">
+                    <p>Итого: <span>500</span> ₽</p>
+                  </div>
+                  <div class="weight">
+                    <p>Общий вес заказа: <span>500</span> ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="wc_payment_method payment_method_cod">
+                <h3>Выберите метод оплаты</h3>
+                <div class="payment_method_cod">
+                  <p>Оплата наличными</p>
+                </div>
+                <div class="payment_method_cod">
+                  <p>Оплата картой</p>
+                </div>
               </div>
             </div>
-            <div class="order-total">
-              <div class="total-box">
-                <p>
-                  Итого:
-                </p>
-                <span>
-                  <strong>
-                    <span class="amount">3500.00</span> ₽
-                  </strong>
-                </span>
-              </div>
-              <div class="order-total_description">
-                <p>
-                  Общая стоимость,<br> без учёта доставки
-                </p>
-              </div>
+            <div class="form-row place-order">
+              <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order"
+                value="Подтвердить заказ" data-value="Подтвердить заказ">Подтвердить заказ</button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="back__to m-top">
-          <a href="#">Продолжить покупки</a>
+          <a href="#">Назад к корзине</a>
         </div>
       </div>
     </section>
