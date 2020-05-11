@@ -2,25 +2,27 @@
   .content {
     background-color: $color_white;
     border-radius: 5px;
-    padding: 50px 30px 40px 35px;
+    padding: 50px 20px 40px;
     .about__product {
       @include flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      width: 100%;
     }
   }
   .left {
     @include flex;
-    flex: 0 1 50%;
-    height: 100%;
+    max-width: 580px;
+    width: 100%;
+    flex-wrap: nowrap;
   }
   .slider-for {
     max-width: 450px;
     width: 100%;
-    height: 100%;
-    img {
-      max-width: 450px;
-      height: 100%;
-      width: 100%;
+    .slider__img {
+      margin: 0 15px;
+      img {
+        width: 100%;
+      }
     }
   }
   .slider-nav {
@@ -42,7 +44,9 @@
   .slider__for-box {
     position: relative;
     margin: 0 0 0 5px;
+    width: 100%;
     .sale__attentionIcon {
+      text-align: center;
       position: absolute;
       right: 0;
       top: 0;
@@ -55,8 +59,9 @@
     }
   }
   .rigth {
-    flex: 1 1 50%;
     margin-top: 7px;
+    max-width: 580px;
+    width: 100%;
     .itemOfGoods {
       color: $color_card__product-text;
       font-size: 0.8em;

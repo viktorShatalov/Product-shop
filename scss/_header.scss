@@ -1,4 +1,38 @@
 #header {
+  .mobile__content {
+    display: none;
+    text-align: center;
+    font-size: 1em;
+    .category__link {
+      text-align: center;
+      display: block;
+      padding: 7px 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .mobile__content-description {
+      background-color: $color_bg_header-bottom__row;
+      padding: 70px 0;
+      color: $color_white;
+      line-height: 1.4;
+      height: 40vh;
+      font-size: 1rem;
+      a {
+        color: $color_white;
+      }
+    }
+    .close-menu {
+      background-color: $color_white;
+      p {
+        color: $color_header_link;
+        font-weight: bold;
+        padding: 15px 0;
+      }
+    }
+  }
+  .mobile__content.active {
+    display: block;
+  }
   border-bottom: 3px solid $color_white;
   a {
     color: $color_header_link;
@@ -8,6 +42,9 @@
     padding: 3px 0 2px;
     .logo {
       cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .menu__items {
       ul {
@@ -48,6 +85,7 @@
     color: $color_white;
     font-size: 1.112em;
     padding: 15px 0;
+    position: relative;
     a {
       color: $color_white;
     }
@@ -96,7 +134,7 @@
       }
       .category {
         z-index: 4;
-        width: 1225px;
+        width: 100%;
         background-color: $color_bg_category-menu;
         position: absolute;
         top: 48px;
@@ -148,7 +186,8 @@
         }
         .category__sub-menu {
           ul {
-            @include flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
           }
           li {
             display: block;

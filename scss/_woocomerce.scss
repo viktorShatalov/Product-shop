@@ -184,7 +184,8 @@
   top: 7px;
 }
 .cart-subtotal,
-#billing_country_field {
+#billing_country_field,
+.sbscrbr-unsubscribe-wrap {
   display: none;
 }
 
@@ -410,4 +411,31 @@
 }
 .wc_payment_method {
   margin-bottom: 20px;
+}
+// woocommerce-order
+.woocommerce-order {
+  .woocommerce-notice {
+    color: $color_footer-linkMenu-active;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  ul {
+    li {
+      padding: 5px 0;
+    }
+    .woocommerce-Price-amount {
+      font-weight: bold;
+      color: $color_footer-linkMenu-active;
+      font-size: 1.25em;
+    }
+  }
+}
+.woocommerce-order-details {
+  display: none;
+}
+
+// filtr category-page
+
+.chosen-container {
+  width: 100% !important;
 }

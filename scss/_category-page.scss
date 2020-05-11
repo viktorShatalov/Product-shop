@@ -5,12 +5,14 @@
 }
 .left__sidebar {
   max-width: 25%;
+  width: 100%;
   background-color: $color_left_sidbar_bg;
   color: $color_left_sidbar_text;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   padding: 22px;
   border-right: 3px solid rgba(151, 151, 151, 0.747);
+  margin-bottom: 20px;
   a {
     color: $color_left_sidbar_text;
   }
@@ -106,9 +108,11 @@
   .right__content {
     background-color: $color_white;
     max-width: 75%;
+    width: 100%;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     padding: 30px 35px;
+    margin-bottom: 20px;
     .name__of__category {
       p {
         color: $color_header_link;
@@ -122,6 +126,10 @@
       @include flex;
       font-size: 0.785em;
       margin-bottom: 40px;
+      align-items: center;
+      form {
+        margin: 10px 0;
+      }
       legend {
         color: $color_text-description;
       }

@@ -33,33 +33,36 @@
     flex: 1 1 63%;
     .footer__subscribe {
       p {
-        width: 100%;
         max-width: 90%;
         font-size: 1.35em;
         color: $color_text-description;
         margin: 0 0 25px;
       }
+      #sbscrbr-form {
+        @include flex;
+      }
       input[type="email"],
-      input[type="button"] {
+      input[name="sbscrbr_email"],
+      input[type="button"],
+      input[name="sbscrbr_submit_email"] {
         border: 2px solid $color_footer-subscribe-btn;
         height: 70px;
         width: 100%;
         max-width: 345px;
         padding: 0 25px;
         margin-bottom: 35px;
-        font-size: 1.5em;
+        font-size: 1em;
         color: $color_header_link;
       }
-      input[type="button"] {
+      input[type="button"],
+      input[name="sbscrbr_submit_email"] {
         max-width: 200px;
         color: $color_white;
         background-color: $color_footer-subscribe-btn;
-        margin: 0 0 35px -5px;
+        margin: 0 0 35px 0;
         @include transition;
         cursor: pointer;
-        &:hover {
-          @include hvrOpacity;
-        }
+        font-size: 1.25rem;
       }
     }
     .footer__about {

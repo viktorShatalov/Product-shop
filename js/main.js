@@ -3,8 +3,11 @@ jQuery(document).ready(function () {
     //  mobile-menu
 
     jQuery('.burger').click(function () {
-        jQuery('.burger,.navbar').toggleClass('active');
+        jQuery('.burger,.menu__items,.mobile__content').toggleClass('active');
         jQuery('html,body').toggleClass('lock');
+    })
+    jQuery('.close-menu').click(function () {
+        jQuery('.burger,.menu__items,.mobile__content').removeClass('active');
     })
 
     // category dropdown menu
@@ -52,17 +55,24 @@ jQuery(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3500,
-        // responsive: [
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             centerMode: true,
-        //         }
-        //     }
-        // ]
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                }
+            },
+        ]
     });
 
 
@@ -72,10 +82,30 @@ jQuery(document).ready(function () {
         infinite: true,
         lazyLoad: "progressive",
         slidesToScroll: 1,
+        slidesToShow: 5,
         variableWidth: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3500,
-        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: false,
+                }
+            }
+        ]
     });
 
     // card-product slider
@@ -88,14 +118,28 @@ jQuery(document).ready(function () {
         lazyLoad: "progressive",
         asNavFor: '.slider-nav',
         fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         draggable: false,
+        centerMode: true,
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 1024,
                 settings: {
-                    centerMode: true,
+                    dots: false,
+                    draggable: true,
+                    fade: false,
                 }
-            }
+            },
+            // {
+            //     breakpoint: 480,
+            //     settings: {
+            //         centerMode: true,
+            //         slidesToShow: 1,
+            //         arrows: false,
+            //         dots: false,
+            //     }
+            // }
         ]
     });
 
@@ -115,9 +159,12 @@ jQuery(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     centerMode: true,
                     centerPadding: '0',
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: false,
                 }
             }
         ]
@@ -139,6 +186,8 @@ jQuery(document).ready(function () {
                     slidesToShow: 2,
                     centerMode: true,
                     centerPadding: '0',
+                    arrows: false,
+                    dots: false,
                 }
             }
         ]
@@ -154,31 +203,4 @@ jQuery(document).ready(function () {
         e.preventDefault()
     })
 
-    // cart-item counter
-
-    // function addHandlers(count) {
-
-    //     let minus = count.querySelector("#quantity-arrow-minus");
-    //     let number = count.querySelector(".qty");
-    //     let plus = count.querySelector("#quantity-arrow-plus");
-
-    //     plus.addEventListener("click", function () {
-    //         +number.value++;
-    //     });
-
-    //     minus.addEventListener("click", function () {
-    //         +number.value--;
-    //         if (number.value == 0) {
-    //             minus.disabled = true;
-    //         }
-    //         else {
-    //             minus.disabled = false;
-    //         }
-    //     });
-    // }
-
-    // let counts = document.querySelectorAll(".product-quantity");
-    // counts.forEach(addHandlers);
-
 })
-
