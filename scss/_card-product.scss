@@ -28,11 +28,11 @@
   .slider-nav {
     max-width: 105px;
     height: 100%;
-    margin: 30px 0 0;
+    margin: 20px 0 0;
     .slider__img {
       border: 1px solid rgba(17, 17, 17, 0.274);
       border-radius: 5px;
-      margin: 3.33333px 0;
+      margin: 1.5px 0;
       img {
         max-width: 100px;
         height: 100px;
@@ -317,6 +317,8 @@
       .item__name {
         text-align: center;
         margin: 20px 0 10px;
+        height: 63px;
+        overflow: hidden;
         span {
           font-size: 0.75em;
           color: $color_left_sidbar_text;

@@ -13,6 +13,9 @@
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
+  #footer .footer__nav ul li {
+    width: 150px;
+  }
   // category page
   #category {
     .right__content,
@@ -36,6 +39,16 @@
   body {
     overflow-x: hidden;
     font-size: 14px;
+  }
+  #cart,
+  #ordering {
+    .conteiner {
+      margin: 0 10px;
+      padding: 25px 10px;
+      .step__name-dreadcumbs {
+        display: none;
+      }
+    }
   }
   .conteiner {
     padding: 0 10px;
@@ -287,6 +300,13 @@
     }
     .right__content {
       padding: 30px 20px;
+      .product__items {
+        ul {
+          li {
+            margin: 0 auto;
+          }
+        }
+      }
     }
   }
   .added_to_cart {
@@ -318,6 +338,64 @@
     justify-content: center;
     li {
       width: 100%;
+      margin-right: auto;
     }
+  }
+  // #cart
+  #cart {
+    .cart_item {
+      flex-wrap: nowrap;
+      .cart_item-box {
+        flex-wrap: nowrap;
+        &:first-child,
+        &:last-child {
+          padding: 0;
+        }
+        &:first-child {
+          flex-wrap: wrap;
+        }
+      }
+      .product-remove {
+        margin: 0 auto;
+      }
+      .product-name {
+        margin-bottom: 0px;
+        height: 95px;
+        overflow: hidden;
+      }
+      .product-thumbnail {
+        padding: 0;
+        border: none;
+        a img {
+          object-fit: contain;
+        }
+      }
+    }
+    .cart__content {
+      .coupon__action {
+        input[name="coupon_code"],
+        button {
+          margin: 5px auto;
+          width: 100%;
+          border: 1px solid;
+          text-align: center;
+        }
+        button {
+          background-color: $color_footer-subscribe-btn;
+          color: $color_white;
+        }
+      }
+    }
+  }
+  #ordering
+    .cart__content
+    .checkout
+    .woocommerce-billing-fields__field-wrapper
+    .form-row:nth-child(4)
+    input {
+    max-width: 100%;
+  }
+  .page {
+    padding: 20px 10px;
   }
 }

@@ -144,7 +144,7 @@ ul {
     background-color: $color_slider_arows;
     cursor: pointer;
   }
-  .slick-prev {
+  .slick-next {
     right: -40px;
     &::before {
       content: url(../img/icon/arrow_next_firstSlider.png);
@@ -154,7 +154,7 @@ ul {
       transform: translateX(-50%);
     }
   }
-  .slick-next {
+  .slick-prev {
     left: -40px;
     &::before {
       content: url(../img/icon/arrow_prew_firstSlider.png);
@@ -180,7 +180,7 @@ ul {
     background-color: $color_slider_arows;
     cursor: pointer;
   }
-  .slick-prev {
+  .slick-next {
     right: -50px;
     &::before {
       content: url(../img/icon/arrow_next_saleSlider.png);
@@ -190,7 +190,7 @@ ul {
       transform: translateX(-50%);
     }
   }
-  .slick-next {
+  .slick-prev {
     left: -50px;
     &::before {
       content: url(../img/icon/arrow_prew_saleSlider.png);
@@ -214,7 +214,7 @@ ul {
     cursor: pointer;
   }
   .slick-prev {
-    bottom: 25px;
+    bottom: 20px;
     background-image: linear-gradient(
       360deg,
       rgb(254, 254, 254) 0%,
@@ -256,7 +256,7 @@ ul {
     background-color: $color_slider_arows;
     cursor: pointer;
   }
-  .slick-prev {
+  .slick-next {
     right: -50px;
     &::before {
       content: url(../img/icon/arrow_next_saleSlider.png);
@@ -266,7 +266,7 @@ ul {
       transform: translateX(-50%);
     }
   }
-  .slick-next {
+  .slick-prev {
     left: -50px;
     &::before {
       content: url(../img/icon/arrow_prew_saleSlider.png);

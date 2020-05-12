@@ -143,7 +143,7 @@
       ul {
         @include flex;
         li {
-          margin: 0 auto;
+          margin: 0 ;
           .sale__product-card {
             box-shadow: none;
             border: 1px solid rgba(151, 151, 151, 0.6);

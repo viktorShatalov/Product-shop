@@ -253,7 +253,15 @@
     }
     .contacts__phone {
       a {
+        position: relative;
         color: $color_white;
+        margin: 0 0 0 30px;
+        &::before {
+          content: url(../img/icon/phone.png);
+          position: absolute;
+          top: 0px;
+          left: -30px;
+        }
       }
     }
     #cart,

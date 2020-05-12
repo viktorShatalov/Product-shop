@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3500,
         responsive: [
             {
@@ -81,10 +81,10 @@ jQuery(document).ready(function () {
         dots: false,
         infinite: true,
         lazyLoad: "progressive",
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         slidesToShow: 5,
         variableWidth: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3500,
         responsive: [
             {
@@ -175,9 +175,10 @@ jQuery(document).ready(function () {
         arrows: true,
         dots: false,
         lazyLoad: "progressive",
-        infinite: false,
+        infinite: true,
         slidesToShow: 7,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
+        variableWidth: true,
         autoplay: true,
         responsive: [
             {

@@ -36,7 +36,7 @@
   }
   .step__name-dreadcumbs {
     background-color: $color_step_bg;
-    margin: 0 -20px;
+    margin: 30px -20px 0;
     padding: 0 85px;
     ul {
       @include flex;
@@ -68,89 +68,114 @@
             color: $color_cart_text;
           }
         }
-        &:nth-child(1) a {
-          color: $color_category-menu_text;
-          &:before {
-            color: $color_category-menu_text;
-          }
-        }
         &:nth-child(2) a {
-          color: $color_header_link;
           &:before {
             content: "2";
+          }
+        }
+        &:nth-child(3) a {
+          color: $color_header_link;
+          &:before {
+            content: "3";
             color: $color_header_link;
           }
         }
-        &:nth-child(3) a {
-          &:before {
-            content: "3";
+      }
+    }
+  }
+  .cart__content {
+    .first,
+    .item {
+      @include flex;
+      justify-content: space-between;
+      .item {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        max-width: 550px;
+      }
+    }
+    .method__delivery,
+    .box {
+      @include flex;
+      justify-content: space-between;
+      .box {
+        flex-direction: column;
+        width: 100%;
+        max-width: 30%;
+        &:first-child {
+          width: 100%;
+          max-width: 920px;
+        }
+        input {
+        }
+      }
+    }
+    #order_review {
+      h3 {
+        color: $color_header_link;
+        font-size: 1.35em;
+        padding: 40px 0 20px;
+      }
+    }
+    .checkout {
+      .woocommerce-billing-fields__field-wrapper {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-gap: 10px;
+        .form-row {
+          display: flex;
+          flex-direction: column;
+          input {
+            width: 100%;
+            max-width: 300px;
+          }
+          input[type="radio"] {
+            width: 20px;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+          &:nth-child(1),
+          &:nth-child(2) {
+            input {
+              width: 100%;
+              max-width: 400px;
+            }
+          }
+          &:nth-child(4) {
+            grid-column: 1/3;
+            input {
+              width: 100%;
+              max-width: 84%;
+            }
           }
         }
-        &:nth-child(3) a {
-          &::after {
-            content: none;
-          }
+      }
+      legend {
+        font-size: 1.3em;
+        color: $color_header_link;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+      label {
+        font-weight: bold;
+        color: $color_category-menu_text;
+        font-weight: bold;
+        padding: 10px 0;
+        font-size: 1em;
+        .required {
+          display: none;
         }
+      }
+      input {
+        padding: 10px;
+        border: 1px solid $color_cart_border-item;
+        font-size: 1em;
       }
     }
   }
 }
 .m-top {
   margin-top: 20px;
-}
-.cart__content {
-  .first,
-  .item {
-    @include flex;
-    justify-content: space-between;
-    .item {
-      flex-direction: column;
-      padding: 0;
-      width: 100%;
-      max-width: 550px;
-    }
-  }
-  .method__delivery,
-  .box {
-    @include flex;
-    justify-content: space-between;
-    .box {
-      flex-direction: column;
-      width: 100%;
-      max-width: 30%;
-      &:first-child {
-        width: 100%;
-        max-width: 920px;
-      }
-      input {
-      }
-    }
-  }
-  #order_review {
-    h3 {
-      color: $color_header_link;
-      font-size: 1.35em;
-      padding: 40px 0 20px;
-    }
-  }
-  .checkout {
-    legend {
-      font-size: 1.3em;
-      color: $color_header_link;
-      font-weight: bold;
-      padding: 40px 0 20px;
-    }
-    label {
-      font-weight: bold;
-      color: $color_category-menu_text;
-      font-weight: bold;
-      padding: 10px 0;
-      font-size: 1em;
-    }
-    input {
-      padding: 10px;
-      border: 1px solid $color_cart_border-item;
-      font-size: 1em;
-    }
-  }
 }
