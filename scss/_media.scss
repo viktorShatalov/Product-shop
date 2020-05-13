@@ -257,6 +257,11 @@
   }
   #footer .footer__nav ul li {
     width: 160px;
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(5) {
+      text-align: right;
+    }
   }
   #footer .footer__contacts .footer__subscribe input[type="email"],
   #footer .footer__contacts .footer__subscribe input[name="sbscrbr_email"],
@@ -397,5 +402,9 @@
   }
   .page {
     padding: 20px 10px;
+  }
+  .content__otherPage h1,
+  .content__otherPage h2 {
+    text-align: center;
   }
 }

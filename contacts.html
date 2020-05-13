@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин "Корзинка"</title>
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+    <div class="top__row">
+      <div class="conteiner m-auto">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo/logo.png" alt="Логотип Магазина 'Карзинка'"></a>
+        </div>
+        <nav class="menu__items">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="cabinet">
+          <a href="#">
+            <img src="img/icon/noun_personal.png" alt="personal icon">
+            <span>Личный кабинет</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom__row">
+      <div class="conteiner m-auto">
+        <div class="catalog__menu">
+          <span class="burger__catalog container-icon">
+            <span></span>
+          </span>
+          <a class="category__link " href="#">Каталог товаров</a>
+          <div class="category">
+            <div class="category__box-menu">
+              <ul class="category__menu-items">
+                <li data-filter=".item1"><a href="#">Категория простая</a></li>
+                <li data-filter=".item2"><a href="#">Выделенная категория</a></li>
+                <li data-filter=".item3"><a href="#">Категория с длинным названием в две строки</a></li>
+                <li data-filter=".item4"><a href="#">Категория простая</a></li>
+                <li data-filter=".item5"><a href="#">Категория простая</a></li>
+                <li data-filter=".item6"><a href="#">Категория простая</a></li>
+                <li data-filter=".item7"><a href="#">Категория простая</a></li>
+                <li data-filter=".item8"><a href="#">Категория простая</a></li>
+                <li data-filter=".item9"><a href="#">Категория простая</a></li>
+                <li data-filter=".item10"><a href="#">Категория простая</a></li>
+                <li data-filter=".item11"><a href="#">Категория простая</a></li>
+              </ul>
+              <div class="box__sub-menu">
+                <div class="category__sub-menu item1">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item2">
+                  <h3>
+                    Простая категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item3">
+                  <h3>
+                    Выделенная категория с длинным текстом
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item4">
+                  <h3>
+                    Еще одна категория категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item5">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item6">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item7">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item8">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item9">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item10">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+                <div class="category__sub-menu item11">
+                  <h3>
+                    Выделенная категория
+                  </h3>
+                  <ul>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                    <li><a href="#">Подкатегория с длинным названием</a></li>
+                    <li><a href="#">Подкатегория</a></li>
+                    <li><a href="#">Подкатегория с очень длинным названием</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="category__description">
+              <p>
+                Если вы не нашли то, что искали, можете обратиться по телефону, мы уверены в том, что сможем вам помочь
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="search">
+          <input type="search" name="search" id="input__search" placeholder="Найти товар">
+          <button class="search__btn">
+            <img src="img/icon/search_icon.png" alt="img btn">
+          </button>
+        </div>
+        <div>
+          <p>
+            У нас бесплатная доставка!
+          </p>
+        </div>
+        <div class="contacts__phone">
+          <a href="tel:+7 (999) 999-99-99">+7 (999) 999-99-99</a>
+        </div>
+        <div id="cart" class="cart">
+          <button class="cart__btn">
+            <img src="img/icon/noun_cart.png" alt="cart">
+          </button>
+          <a href="#">
+            Корзина
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- main -->
+  <main>
+    <section id="contakts">
+      <div class="conteiner m-auto">
+        <div class="content">
+          <h1>Контакты</h1>
+          <div class="contacts__adress">
+            <p>Адрес: <span>Воркута, ул. Дончука, 11</span></p>
+          </div>
+          <div class="contacts__phone">
+            <p>Телефон: <span><a href="tel:200-01">200-01</a></span></p>
+
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.7276239527869!2d64.04584791597433!3d67.50170583794882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x448774a7864bad85%3A0xa01244c2244d1322!2z0YPQuy4g0JTQvtC90YfRg9C60LAsIDExLCDQktC-0YDQutGD0YLQsCwg0KDQtdGB0L8uINCa0L7QvNC4LCDQoNC-0YHRgdC40Y8sIDE2OTkwMA!5e0!3m2!1sru!2sua!4v1589312039088!5m2!1sru!2sua"
+              width="1200" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="conteiner m-auto">
+      <div class="footer__menu">
+        <nav class="footer__nav">
+          <ul>
+            <li><a class="active" href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__contacts">
+        <div class="footer__subscribe">
+          <p>Вы можете подписаться на рассылку выгодных предложений от нашего магазина:</p>
+          <input type="email" name="subscribe__email" id="subscribe__email" placeholder="Введите ваш e-mail">
+          <input type="button" value="Отправить">
+        </div>
+        <div class="footer__about">
+          <div class="phone">
+            <p>Телефон:</p>
+            <a href="tel:+7 (000) 000-00-00">+7 (000) 000-00-00</a>
+            <br>
+            <a href="tel:8 000 111-11-11">8 000 111-11-11</a>
+          </div>
+          <div class="operating__mode">
+            <p>Режим работы:</p>
+            <p>с 9:00 до 22:00<br>
+              ежедневно</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__signature conteiner m-auto">
+      <p>
+        Copyright © 2020 Корзинка
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

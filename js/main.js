@@ -86,6 +86,7 @@ jQuery(document).ready(function () {
         variableWidth: true,
         autoplay: true,
         autoplaySpeed: 3500,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -93,16 +94,17 @@ jQuery(document).ready(function () {
                     arrows: false,
                     dots: false,
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToScroll: 1,
-                    slidesToShow: 1,
+                    slidesToScroll: 2,
+                    slidesToShow: 2,
                     arrows: false,
                     dots: false,
+                    // centerMode: true,
                 }
             }
         ]

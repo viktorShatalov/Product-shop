@@ -453,6 +453,29 @@ ul {
   border-radius: 4px;
 }
 
+#contakts .map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin: 20px 0;
+}
+
+#contakts .map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#contakts .contacts__adress p,
+#contakts .contacts__phone p {
+  margin: 10px 0;
+  color: #333333;
+  font-size: 1.25em;
+}
+
 #header {
   border-bottom: 3px solid white;
 }
@@ -3461,6 +3484,63 @@ span.wpcf7-not-valid-tip {
   border-radius: 5px;
 }
 
+.sale__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sale_cat {
+  margin: 10px;
+}
+
+.sale_cat .sale_head {
+  position: relative;
+}
+
+.sale_cat .sale_head h3 {
+  font-size: 2em;
+  line-height: 1.2;
+  position: absolute;
+  padding: 10px 5px;
+}
+
+.sale_cat .sale_head img {
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.sale_cat_item h3 {
+  font-size: 2em;
+  color: #ff7800;
+  margin: 0 0 20px;
+}
+
+.sale_cat_item .sale_img {
+  margin: 0 10px 10px 0;
+}
+
+.sale_cat_item .sale_text {
+  line-height: 1.4;
+}
+
+.content__otherPage h1,
+.content__otherPage h2 {
+  color: #ff8625;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 1360px) {
   body {
@@ -3723,6 +3803,9 @@ span.wpcf7-not-valid-tip {
   #footer .footer__nav ul li {
     width: 160px;
   }
+  #footer .footer__nav ul li:nth-child(1), #footer .footer__nav ul li:nth-child(3), #footer .footer__nav ul li:nth-child(5) {
+    text-align: right;
+  }
   #footer .footer__contacts .footer__subscribe input[type="email"],
   #footer .footer__contacts .footer__subscribe input[name="sbscrbr_email"],
   #footer .footer__contacts .footer__subscribe input[type="button"],
@@ -3852,6 +3935,10 @@ input {
   }
   .page {
     padding: 20px 10px;
+  }
+  .content__otherPage h1,
+  .content__otherPage h2 {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.min.css.map */
