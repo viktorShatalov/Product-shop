@@ -1,5 +1,21 @@
 jQuery(document).ready(function () {
 
+    function preloader() {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+        var preloader = jQuery('#preloader');
+        if (!isMobile) {
+            setTimeout(function () {
+                preloader.addClass('preloaded');
+            }, 800);
+            setTimeout(function () {
+                preloader.remove();
+            }, 2000);
+        } else {
+            preloader.remove();
+        }
+    };
+    preloader()
+
     //  mobile-menu
 
     jQuery('.burger').click(function () {

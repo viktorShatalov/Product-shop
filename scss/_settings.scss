@@ -346,6 +346,11 @@ ins {
     }
   }
 }
+.content__otherPage {
+  h1 {
+    font-family: "Gilroy-medium";
+  }
+}
 #contakts {
   .map {
     overflow: hidden;
@@ -371,6 +376,9 @@ ins {
   }
 }
 #shipping {
+  h1 {
+    font-family: "Gilroy-medium";
+  }
   ul {
     li {
       font-size: 1.125em;

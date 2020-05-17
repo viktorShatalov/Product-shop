@@ -16,7 +16,7 @@
         <div class="footer__contacts">
             <div class="footer__subscribe">
                 <p>Вы можете подписаться на рассылку выгодных предложений от нашего магазина:</p>
-                <?php echo do_shortcode('[sbscrbr_form]') ?>
+                <?php echo do_shortcode('[mailpoet_form id="1"]') ?>
             </div>
             <div class="footer__about">
                 <div class="phone">

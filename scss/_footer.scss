@@ -4,20 +4,21 @@
   a {
     color: $color_footer-linkMenu;
   }
-  .conteiner,
-  .footer__nav ul {
+  .conteiner {
     @include flex;
     justify-content: space-between;
   }
   .footer__nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
     li {
       font-size: 1.75em;
       font-weight: bold;
-      width: 190px;
       margin-bottom: 19px;
       a {
         @include transition;
-        &.active {
+        &[aria-current="page"] {
           color: $color_footer-linkMenu-active;
         }
         &:hover {
@@ -27,13 +28,12 @@
     }
   }
   .footer__menu {
-    flex: 1 1 37%;
+    flex: 0 1 48%;
   }
   .footer__contacts {
-    flex: 1 1 63%;
+    flex: 0 1 49%;
     .footer__subscribe {
       p {
-        max-width: 90%;
         font-size: 1.35em;
         color: $color_text-description;
         margin: 0 0 25px;
@@ -78,6 +78,7 @@
         cursor: pointer;
         font-size: 1.5rem;
         padding: 21px 18px;
+        height: 70px;
       }
     }
     .footer__about {

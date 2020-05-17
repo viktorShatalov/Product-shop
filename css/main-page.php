@@ -5,6 +5,10 @@ Template Name: Главная страница
 ?>
 <?php get_header(); ?>
 <main>
+     <!-- preloader -->
+  <div id="preloader">
+    <div class="loader_line"></div>
+  </div>
     <!-- first slider -->
     <section id="first__slider">
         <div class="conteiner m-auto">
@@ -110,21 +114,21 @@ Template Name: Главная страница
                             </div>
                         </a>
                     <?php endforeach; ?>
-                    <a href="#modal" data-uk-modal>
-                        <div class="item last__item">
 
-                            <div class="category__description">
+                    <div class="item last__item">
+                        <div class="category__description">
+                            <a href="#modal" data-uk-modal>
                                 <h3>
                                     Не нашли то, что искали?
                                 </h3>
-                                <p>
-                                    Сообщите нам, мы
-                                    стараемся расширять<br>
-                                    свой ассортимент!
-                                </p>
-                            </div>
+                                Сообщите нам, мы
+                                стараемся расширять<br>
+                                свой ассортимент!
+                            </a><br>
+                            <a class="link_tel" href="tel:200-01">200-01</a>
                         </div>
-                    </a>
+                    </div>
+
                 </div>
             </div>
         </div>

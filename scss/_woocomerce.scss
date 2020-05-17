@@ -540,9 +540,9 @@
 
 #sale {
   .product__items {
+    justify-content: center;
     ul {
       @include flex;
-      justify-content: space-between;
     }
     .added_to_cart {
       left: -70px;
@@ -552,4 +552,34 @@
 }
 .woof_products_top_panel {
   display: none !important;
+}
+#customer_login {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 5px;
+}
+.woocommerce-MyAccount-navigation {
+  ul {
+    @include flex;
+    justify-content: space-evenly;
+    margin: 0 0 30px;
+    li {
+      a {
+        color: $color_footer-linkMenu-active;
+        font-weight: bold;
+        width: 150px;
+        padding: 10px;
+      }
+    }
+  }
+}
+.woocommerce-MyAccount-content {
+  @include flex;
+  flex-direction: column-reverse;
+  p {
+    a {
+      color: $color_footer-linkMenu-active;
+      font-weight: bold;
+    }
+  }
 }

@@ -205,23 +205,25 @@
   .product__items .sale__product-card .addToCart .add_to_cart_button {
     margin-left: -18px;
   }
-  .category__ptofuct-content .category__items .item {
-    max-width: 165px;
-    .category__description {
-      padding: 20px 10px;
-      h3 {
-        font-size: 1.5em;
+  .category__ptofuct-content .category__items {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    .item {
+      max-width: 165px;
+      .category__description {
+        padding: 20px 10px;
+        h3 {
+          font-size: 1.5em;
+        }
       }
     }
   }
   .last__item {
+    margin: 5px auto !important;
     .category__description {
       position: relative !important;
       top: 0 !important;
-      height: 169px !important;
-      h3 {
-        margin: 0px 0 20px !important;
-      }
+      padding: 5px !important;
+      min-height: 100% !important;
     }
   }
 
@@ -240,6 +242,10 @@
   }
   #footer {
     padding: 40px 0 0 !important;
+    .footer__menu,
+    .footer__contacts {
+      flex: 0 1 100%;
+    }
   }
   .footer__signature {
     background-color: $color_bg_header-bottom__row;
@@ -248,14 +254,7 @@
       margin: 25px auto;
     }
   }
-  #footer .footer__nav ul li {
-    width: 160px;
-    &:nth-child(1),
-    &:nth-child(3),
-    &:nth-child(5) {
-      text-align: right;
-    }
-  }
+
   #footer .footer__contacts .footer__subscribe input[type="email"],
   #footer .footer__contacts .footer__subscribe input[type="button"],
   #footer
@@ -284,9 +283,6 @@
   #footer .footer__contacts .footer__about .phone p,
   #footer .footer__contacts .footer__about .operating__mode p {
     text-align: center;
-  }
-  #footer .footer__nav ul li {
-    width: 150px;
   }
   // category page
   #category {
