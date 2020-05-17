@@ -140,6 +140,10 @@
         top: 48px;
         left: 0;
         font-size: 0.7em;
+        display: none;
+        &.active {
+          display: block;
+        }
         .category__box-menu {
           display: flex;
         }
@@ -248,6 +252,14 @@
         img {
           max-width: 20px;
           height: 20px;
+        }
+      }
+    }
+    .free_shipping {
+      p {
+        text-align: center;
+        span {
+          font-size: small;
         }
       }
     }

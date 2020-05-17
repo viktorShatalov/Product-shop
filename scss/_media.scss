@@ -13,9 +13,6 @@
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
-  #footer .footer__nav ul li {
-    width: 150px;
-  }
   // category page
   #category {
     .right__content,
@@ -27,10 +24,6 @@
     .right__content {
       padding: 30px 20px;
     }
-  }
-  .added_to_cart {
-    left: -90px;
-    bottom: -11px;
   }
 }
 
@@ -264,14 +257,12 @@
     }
   }
   #footer .footer__contacts .footer__subscribe input[type="email"],
-  #footer .footer__contacts .footer__subscribe input[name="sbscrbr_email"],
   #footer .footer__contacts .footer__subscribe input[type="button"],
   #footer
     .footer__contacts
     .footer__subscribe
     input[name="sbscrbr_submit_email"] {
-    font-size: 1em;
-    margin: 0;
+    margin: 0 auto;
     max-width: 100%;
     text-align: center;
   }
@@ -294,7 +285,9 @@
   #footer .footer__contacts .footer__about .operating__mode p {
     text-align: center;
   }
-
+  #footer .footer__nav ul li {
+    width: 150px;
+  }
   // category page
   #category {
     .right__content,
@@ -306,20 +299,35 @@
     .right__content {
       padding: 30px 20px;
       .product__items {
+        .sale__product-card {
+          padding: 0 5px 20px !important;
+          grid-template-columns: initial !important;
+          grid-auto-columns: 2fr 1fr !important;
+          .card__footer {
+            justify-self: baseline !important;
+          }
+        }
         ul {
           li {
-            margin: 0 auto;
+            margin: 0 auto 20px;
+            .addToCart {
+              display: flex;
+              margin: -0px 20px 0;
+            }
+            .add_to_cart_button {
+              left: 85px;
+            }
           }
         }
       }
     }
   }
-  .added_to_cart {
-    left: -90px;
-    bottom: -11px;
-  }
   // card-page
   #card-product {
+    .characteristics,
+    .reviews__tabs {
+      flex: 1 1 100%;
+    }
     .rigth .about__items .product__description,
     .rigth .about__items .product__price .add-to-cart .max__product-count,
     .slider-nav {
@@ -332,9 +340,6 @@
     .left {
       flex: 1 1 100%;
     }
-  }
-  .add-to-cart .added_to_cart {
-    bottom: 0;
   }
   .characteristics {
     padding: 0;
@@ -406,5 +411,36 @@
   .content__otherPage h1,
   .content__otherPage h2 {
     text-align: center;
+  }
+
+  #sale {
+    .product__items {
+      ul {
+        li {
+          margin: 0 auto 10px;
+        }
+      }
+      .added_to_cart {
+        bottom: -19px;
+        left: -90px;
+      }
+    }
+  }
+  #category {
+    .added_to_cart {
+      bottom: -7px;
+      left: 120px;
+    }
+  }
+  .sale__product-slider {
+    .added_to_cart {
+      bottom: -19px;
+      left: -90px;
+    }
+  }
+  #card-product {
+    .added_to_cart {
+      bottom: 0;
+    }
   }
 }

@@ -107,7 +107,9 @@ pre,
 ul {
   margin: 0;
 }
-
+ins {
+  background: none;
+}
 // sliders settings
 .first__slider {
   .slick-dots {
@@ -365,6 +367,19 @@ ul {
       margin: 10px 0;
       color: $color_category-menu_text;
       font-size: 1.25em;
+    }
+  }
+}
+#shipping {
+  ul {
+    li {
+      font-size: 1.125em;
+      margin: 5px 0;
+      font-weight: bold;
+      a,
+      span {
+        color: $color_footer-linkMenu-active;
+      }
     }
   }
 }

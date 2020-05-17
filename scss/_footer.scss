@@ -38,8 +38,22 @@
         color: $color_text-description;
         margin: 0 0 25px;
       }
-      #sbscrbr-form {
+      p.sbscrbr-form-error {
+        color: $color_danger;
+        font-size: medium;
+        margin: 0 0 5px;
+      }
+      p.sbscrbr-form-done {
+        color: rgba(0, 128, 0, 0.85);
+        font-size: medium;
+        position: absolute;
+        top: -20px;
+      }
+      #sbscrbr-form,
+      .mailpoet_form {
         @include flex;
+        position: relative;
+        padding: 0;
       }
       input[type="email"],
       input[name="sbscrbr_email"],
@@ -51,18 +65,19 @@
         max-width: 345px;
         padding: 0 25px;
         margin-bottom: 35px;
-        font-size: 1em;
+        font-size: 1.5em;
         color: $color_header_link;
       }
       input[type="button"],
+      input[type="submit"],
       input[name="sbscrbr_submit_email"] {
         max-width: 200px;
         color: $color_white;
         background-color: $color_footer-subscribe-btn;
-        margin: 0 0 35px 0;
         @include transition;
         cursor: pointer;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        padding: 21px 18px;
       }
     }
     .footer__about {
@@ -99,4 +114,19 @@
   P {
     margin-top: -25px;
   }
+}
+.mailpoet_paragraph {
+  margin: 0 auto;
+}
+.mailpoet_message {
+  position: absolute;
+  bottom: -15px;
+  font-size: small;
+}
+.parsley-custom-error-message {
+  color: $color_danger;
+  max-width: 300px;
+}
+.mailpoet_validate_success {
+  color: rgba(0, 128, 0, 0.85);
 }

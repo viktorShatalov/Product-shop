@@ -12,9 +12,8 @@ jQuery(document).ready(function () {
 
     // category dropdown menu
 
-    jQuery('.category').hide()
     jQuery(".catalog__menu span").click(function () {
-        jQuery('.category').toggle('slow')
+        jQuery('.category').toggleClass('active', 'slow')
     });
 
     void function () {
@@ -205,5 +204,6 @@ jQuery(document).ready(function () {
         dropDown.slideToggle('slow');
         e.preventDefault()
     })
+
 
 })

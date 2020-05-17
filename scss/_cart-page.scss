@@ -190,3 +190,12 @@
     margin-top: 20px;
   }
 }
+button[name="clear-cart"] {
+  background-color: transparent;
+  margin: 10px 0;
+  font-family: "Gilroy-medium";
+  font-size: 1em;
+  color: $color_subCategory-menu_text;
+  font-weight: bold;
+  cursor: pointer;
+}
