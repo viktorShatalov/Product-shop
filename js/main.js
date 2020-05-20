@@ -109,14 +109,14 @@ jQuery(document).ready(function () {
                     arrows: false,
                     dots: false,
                     slidesToShow: 3,
-                    slidesToScroll: 2,
+                    slidesToScroll: 3,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToScroll: 2,
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     arrows: false,
                     dots: false,
                     // centerMode: true,

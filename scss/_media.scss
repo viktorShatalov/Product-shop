@@ -222,7 +222,7 @@
     .category__description {
       position: relative !important;
       top: 0 !important;
-      padding: 5px !important;
+      padding: 20px 5px !important;
       min-height: 100% !important;
     }
   }
@@ -438,5 +438,8 @@
     .added_to_cart {
       bottom: 0;
     }
+  }
+  #customer_login {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }

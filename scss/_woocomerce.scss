@@ -565,10 +565,15 @@
     margin: 0 0 30px;
     li {
       a {
-        color: $color_footer-linkMenu-active;
+        color: $color_footer-linkMenu;
         font-weight: bold;
         width: 150px;
         padding: 10px;
+      }
+      &.is-active {
+        a {
+          color: $color_footer-linkMenu-active;
+        }
       }
     }
   }
@@ -580,6 +585,19 @@
     a {
       color: $color_footer-linkMenu-active;
       font-weight: bold;
+    }
+  }
+}
+.woocommerce-orders-table__row--status-processing {
+  text-align: center;
+}
+.woocommerce-Addresses {
+  @include flex;
+  justify-content: space-around;
+  margin: 0 0 20px;
+  .woocommerce-Address-title {
+    a {
+      color: $color_footer-linkMenu-active;
     }
   }
 }

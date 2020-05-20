@@ -12,10 +12,11 @@
     }
     .mobile__content-description {
       background-color: $color_bg_header-bottom__row;
-      padding: 70px 0;
+      padding: 30% 0 0;
       color: $color_white;
       line-height: 1.4;
-      height: 40vh;
+      height: 100vh;
+      min-height: -webkit-fill-available;
       font-size: 1rem;
       a {
         color: $color_white;
@@ -23,6 +24,9 @@
     }
     .close-menu {
       background-color: $color_white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       p {
         color: $color_header_link;
         font-weight: bold;

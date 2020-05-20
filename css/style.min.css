@@ -667,10 +667,11 @@ ins {
 
 #header .mobile__content .mobile__content-description {
   background-color: #ff7303;
-  padding: 70px 0;
+  padding: 30% 0 0;
   color: white;
   line-height: 1.4;
-  height: 40vh;
+  height: 100vh;
+  min-height: -webkit-fill-available;
   font-size: 1rem;
 }
 
@@ -680,6 +681,9 @@ ins {
 
 #header .mobile__content .close-menu {
   background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 #header .mobile__content .close-menu p {
@@ -1606,8 +1610,8 @@ ins {
 #category .right__content .product__items ul li .sale__product-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
   -webkit-box-shadow: none;
           box-shadow: none;
   width: 100%;
@@ -3651,10 +3655,14 @@ div.wpcf7-response-output {
 }
 
 .woocommerce-MyAccount-navigation ul li a {
-  color: #ff7800;
+  color: #666666;
   font-weight: bold;
   width: 150px;
   padding: 10px;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active a {
+  color: #ff7800;
 }
 
 .woocommerce-MyAccount-content {
@@ -3672,6 +3680,25 @@ div.wpcf7-response-output {
 .woocommerce-MyAccount-content p a {
   color: #ff7800;
   font-weight: bold;
+}
+
+.woocommerce-orders-table__row--status-processing {
+  text-align: center;
+}
+
+.woocommerce-Addresses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 0 20px;
+}
+
+.woocommerce-Addresses .woocommerce-Address-title a {
+  color: #ff7800;
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -3905,7 +3932,7 @@ div.wpcf7-response-output {
   .last__item .category__description {
     position: relative !important;
     top: 0 !important;
-    padding: 5px !important;
+    padding: 20px 5px !important;
     min-height: 100% !important;
   }
   .review__items {
@@ -4103,6 +4130,10 @@ input {
   }
   #card-product .added_to_cart {
     bottom: 0;
+  }
+  #customer_login {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 /*# sourceMappingURL=style.min.css.map */
