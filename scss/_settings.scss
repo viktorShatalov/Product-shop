@@ -374,20 +374,32 @@ ins {
       font-size: 1.25em;
     }
   }
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+  }
 }
-#shipping {
+#sheeping {
   h1 {
     font-family: "Gilroy-medium";
   }
+  p{
+    padding: 5px 0;
+  }
   ul {
+    padding: 0 20px;
     li {
       font-size: 1.125em;
       margin: 5px 0;
-      font-weight: bold;
+      list-style: disc;
       a,
       span {
         color: $color_footer-linkMenu-active;
       }
     }
   }
+}
+.mobile-show {
+  display: none !important;
 }

@@ -7,8 +7,9 @@
   }
   .back__to {
     a {
-      color: $color_cart_text;
+      color: $color_footer-linkMenu-active;
       margin: 0 0 0 15px;
+      font-weight: bold;
       font-family: "Gilroy-Regular";
       &::before {
         content: "←";
@@ -69,15 +70,18 @@
           }
         }
         &:nth-child(2) a {
+          color: $color_header_link;
           &:before {
             content: "2";
+            color: $color_header_link;
           }
         }
         &:nth-child(3) a {
-          color: $color_header_link;
           &:before {
             content: "3";
-            color: $color_header_link;
+          }
+          &::after {
+            content: none;
           }
         }
       }
@@ -126,12 +130,18 @@
         .form-row {
           display: flex;
           flex-direction: column;
-          input {
+          input,
+          textarea {
             width: 100%;
             max-width: 300px;
           }
+          textarea {
+            resize: none;
+            height: 150px;
+          }
           input[type="radio"] {
             width: 20px;
+            margin: 0 5px 15px 0;
           }
           &:nth-child(3) {
             display: none;
@@ -168,10 +178,12 @@
           display: none;
         }
       }
-      input {
+      input,
+      textarea {
         padding: 10px;
         border: 1px solid $color_cart_border-item;
         font-size: 1em;
+        font-family: "Gilroy-Regular";
       }
     }
   }

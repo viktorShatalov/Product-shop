@@ -390,10 +390,13 @@
       @include flex;
       padding: 10px 0;
       p {
-        width: 25%;
+        width: 30%;
+        opacity: 0.85;
       }
       span {
         width: 70%;
+        padding: 0 10px;
+        font-weight: bold;
       }
     }
   }

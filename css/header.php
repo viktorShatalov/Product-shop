@@ -40,7 +40,8 @@
                             </p>
                         </div>
                         <div class="contacts__phone">
-                            <a href="tel:<?php echo carbon_get_theme_option('tel1') ?>"><?php echo carbon_get_theme_option('tel1') ?></a>
+                            <a class="link_tel mobile-hide"><?php echo carbon_get_theme_option('tel1') ?></a>
+                            <a class="link_tel mobile-show" href="tel:<?php echo carbon_get_theme_option('tel1') ?>"><?php echo carbon_get_theme_option('tel1') ?></a>
                             <p>
                                 с 9:00 до 22:00<br>
                                 ежедневно
@@ -52,9 +53,15 @@
                     </div>
                 </div>
             </nav>
-            <div class="cabinet">
+            <div class="cabinet">            	
                 <a href="/my-account/">
+                	<?php
+            	if ( is_user_logged_in() ):
+            	$current_user = wp_get_current_user(); ?>
+            	<p class="user"><?php echo $current_user->user_login ?></p>
+            	<?php else: ?>
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/noun_personal.png" alt="personal icon">
+                <?php endif; ?>
                     <span>Личный кабинет</span>
                 </a>
             </div>
@@ -128,7 +135,8 @@
                 </p>
             </div>
             <div class="contacts__phone">
-                <a href="tel:<?php echo carbon_get_theme_option('tel1') ?>"><?php echo carbon_get_theme_option('tel1') ?></a>
+                <a class="link_tel mobile-hide"><?php echo carbon_get_theme_option('tel1') ?></a>
+                <a class="link_tel mobile-show" href="tel:<?php echo carbon_get_theme_option('tel1') ?>"><?php echo carbon_get_theme_option('tel1') ?></a>
             </div>
             <div id="cart" class="cart"><a href="<?php
                                                     global $woocommerce;

@@ -33,7 +33,6 @@
         input[type="submit"] {
           border-bottom: none;
           background-color: $color_bg_header-bottom__row;
-
           height: 40px;
           color: $color_white;
           margin-top: 30px;
@@ -48,4 +47,48 @@ div.wpcf7-response-output {
   font-size: 0.8em;
   margin: 0;
   border: none;
+}
+#wpcf7-f820-p22-o1 {
+  form {
+    text-align: center;
+    .ajax-loader {
+      display: block !important;
+    }
+    .wpcf7-not-valid-tip {
+      font-size: small;
+    }
+    legend {
+      font-size: 1.4em;
+      color: $color_sale-attention;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      input,
+      textarea {
+        border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+        color: $color_category-menu_text;
+        width: 100%;
+        padding: 5px 10px;
+        margin: 0 5px;
+        font-size: 1em;
+        margin: 0 auto;
+        max-width: 300px;
+        font-family: "Gilroy-Regular";
+      }
+      textarea {
+        resize: none;
+        height: 150px;
+        border: 1px solid rgba(17, 17, 17, 0.2);
+      }
+      input[type="submit"] {
+        border-bottom: none;
+        background-color: $color_bg_header-bottom__row;
+        height: 40px;
+        color: $color_white;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
 }

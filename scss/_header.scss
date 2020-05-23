@@ -16,7 +16,7 @@
       color: $color_white;
       line-height: 1.4;
       height: 100vh;
-      min-height: -webkit-fill-available;
+      // min-height: -webkit-fill-available;
       font-size: 1rem;
       a {
         color: $color_white;
@@ -66,6 +66,7 @@
     .cabinet {
       a {
         @include flex;
+        align-items: center;
         font-size: 1.112em;
         cursor: pointer;
         @include transition;
