@@ -70,6 +70,10 @@
         font-size: 1.112em;
         cursor: pointer;
         @include transition;
+        &[title="Выход"] {
+          margin: -12px 0 0 55px;
+          font-size: 0.65em;
+        }
         img {
           object-fit: contain;
         }
@@ -81,6 +85,9 @@
         }
         &:hover {
           @include hvrOpacity;
+        }
+        p {
+          margin: -20px 0 0 0;
         }
       }
     }

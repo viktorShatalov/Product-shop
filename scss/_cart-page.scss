@@ -150,6 +150,7 @@
       .total-box {
         margin: 0 0 20px;
         @include flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
         p {
           font-size: 1.3em;
@@ -193,7 +194,7 @@
 }
 button[name="clear-cart"] {
   background-color: transparent;
-  margin: 10px 0;
+  margin: 20px 0 0;
   font-family: "Gilroy-medium";
   font-size: 1em;
   color: $color_subCategory-menu_text;
