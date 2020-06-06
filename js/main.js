@@ -222,5 +222,22 @@ jQuery(document).ready(function () {
         e.preventDefault()
     })
 
+    // cart remove
+
+    var rBtn = document.querySelectorAll('#cart .cart_item .product-remove a')
+
+    for (let i = 0; i < rBtn.length; i++) {
+        rBtn[i].onclick = function () {
+            setTimeout(() => {
+                window.location.reload()
+            }, 500);
+        };
+    }
+    // btn.show__password
+    jQuery('button.show__password').click(function (e) {
+        let input = jQuery('.woocommerce-Input--password')
+        input.attr('type', input.attr('type') === 'password' ? 'text' : 'password');
+        e.preventDefault()
+    })
 
 })

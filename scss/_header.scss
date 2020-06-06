@@ -203,7 +203,8 @@
         .category__sub-menu {
           ul {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 270px 270px 270px;
+            grid-gap: 10px;
           }
           li {
             display: block;
@@ -247,7 +248,7 @@
         height: 35px;
         background-color: $color_search-bg;
         border-radius: 4px;
-        padding: 0 20px;
+        padding: 0 50px 0 20px;
         font-size: 20px;
         color: $color_header_link;
         border: none;

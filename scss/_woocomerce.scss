@@ -176,16 +176,19 @@
 }
 #quantity-arrow-plus {
   right: -30px;
-  top: 7px;
+  top: 7px; 
 }
 
 // notices-wrapper
 .woocommerce-notices-wrapper {
-  position: absolute;
-  transform: translate(50%, 20px);
-  color: $color_white;
+  // position: absolute;
+  // transform: translate(50%, 20px);
+  // color: $color_white;
   .restore-item {
     color: $color_white;
+  }
+  a {
+    // color: $color_white !important;
   }
 }
 
@@ -406,8 +409,6 @@
     }
   }
   .order-total {
-    border-bottom: 2px solid $color_cart_attribute;
-    padding: 10px 0 20px;
     p {
       font-weight: bold;
       color: $color_footer-linkMenu-active;
@@ -422,8 +423,36 @@
     padding: 10px 0 0;
   }
 }
-.wc_payment_method {
-  margin-bottom: 20px;
+.woocommerce-Input {
+  color: $color_category-menu_text !important;
+}
+#payment {
+  .wc_payment_method {
+    margin-bottom: 10px;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 20px;
+  }
+  ul {
+    margin: 15px 0 5px;
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+p#billing_new_fild12_field {
+  .woocommerce-input-wrapper {
+    display: none !important;
+  }
+}
+#shipping_method {
+  li {
+    margin: 10px 0;
+    label {
+      margin-left: 15px;
+    }
+  }
 }
 // woocommerce-order
 .woocommerce-order {
@@ -431,6 +460,7 @@
     color: $color_footer-linkMenu-active;
     font-weight: bold;
     font-size: 1.5em;
+    margin-bottom: 20px;
   }
   ul {
     li {
@@ -444,14 +474,12 @@
   }
 }
 
-.woocommerce-order-overview__payment-method,
 .woocommerce-column--shipping-address,
 .cart-subtotal,
 #billing_country_field,
 .sbscrbr-unsubscribe-wrap,
 .logged-in-as,
-.woocommerce-message,
-.wc_payment_methods {
+.woocommerce-message {
   display: none;
 }
 // filtr category-page
@@ -502,6 +530,11 @@
     }
   }
 }
+.woocommerce-orders-table {
+  td {
+    text-align: center;
+  }
+}
 .woocommerce-MyAccount-content {
   .woocommerce-Addresses {
     .woocommerce-Address {
@@ -510,6 +543,9 @@
       }
     }
   }
+}
+.address {
+  display: none;
 }
 .woocommerce-address-fields {
   p {
@@ -619,6 +655,11 @@
     justify-content: center;
     ul {
       @include flex;
+      li {
+        .sale__product-card {
+          margin: 0 8px 20px;
+        }
+      }
     }
     .added_to_cart {
       left: -70px;
@@ -689,8 +730,6 @@ textarea[name="order_comments"] {
   font-family: "Gilroy-medium";
   border-radius: 4px;
 }
-#shipping_method{
-  li{
-    margin: 10px 0;
-  }
+#wcus_np_billing_fields {
+  max-width: 333px;
 }

@@ -384,22 +384,37 @@ ins {
   h1 {
     font-family: "Gilroy-medium";
   }
-  p{
+  a,
+  span {
+    color: $color_footer-linkMenu-active;
+    @include transition;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  p {
     padding: 5px 0;
   }
   ul {
     padding: 0 20px;
     li {
-      font-size: 1.125em;
       margin: 5px 0;
       list-style: disc;
-      a,
-      span {
-        color: $color_footer-linkMenu-active;
-      }
     }
   }
 }
 .mobile-show {
   display: none !important;
+}
+button.show__password {
+  margin-left: -31px;
+  position: absolute;
+  background-image: url(../img/icon/show_pass.png);
+  width: 20px;
+  height: 20px !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent !important;
+  color: transparent !important;
+  background-size: contain;
 }

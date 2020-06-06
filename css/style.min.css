@@ -644,6 +644,18 @@ ins {
   font-family: "Gilroy-medium";
 }
 
+#sheeping a,
+#sheeping span {
+  color: #ff7800;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#sheeping a:hover,
+#sheeping span:hover {
+  opacity: 0.75;
+}
+
 #sheeping p {
   padding: 5px 0;
 }
@@ -653,18 +665,25 @@ ins {
 }
 
 #sheeping ul li {
-  font-size: 1.125em;
   margin: 5px 0;
   list-style: disc;
 }
 
-#sheeping ul li a,
-#sheeping ul li span {
-  color: #ff7800;
-}
-
 .mobile-show {
   display: none !important;
+}
+
+button.show__password {
+  margin-left: -31px;
+  position: absolute;
+  background-image: url(../img/icon/show_pass.png);
+  width: 20px;
+  height: 20px !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent !important;
+  color: transparent !important;
+  background-size: contain;
 }
 
 #header {
@@ -936,8 +955,9 @@ ins {
 #header .bottom__row .catalog__menu .category .category__sub-menu ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 270px 270px 270px;
+      grid-template-columns: 270px 270px 270px;
+  grid-gap: 10px;
 }
 
 #header .bottom__row .catalog__menu .category .category__sub-menu li {
@@ -987,7 +1007,7 @@ ins {
   height: 35px;
   background-color: #ffe3cd;
   border-radius: 4px;
-  padding: 0 20px;
+  padding: 0 50px 0 20px;
   font-size: 20px;
   color: #ff8625;
   border: none;
@@ -3252,13 +3272,6 @@ div.wpcf7-response-output {
   top: 7px;
 }
 
-.woocommerce-notices-wrapper {
-  position: absolute;
-  -webkit-transform: translate(50%, 20px);
-          transform: translate(50%, 20px);
-  color: white;
-}
-
 .woocommerce-notices-wrapper .restore-item {
   color: white;
 }
@@ -3546,11 +3559,6 @@ div.wpcf7-response-output {
   font-weight: bold;
 }
 
-.woocommerce-checkout-review-order-table .order-total {
-  border-bottom: 2px solid #dedede;
-  padding: 10px 0 20px;
-}
-
 .woocommerce-checkout-review-order-table .order-total p {
   font-weight: bold;
   color: #ff7800;
@@ -3566,14 +3574,44 @@ div.wpcf7-response-output {
   padding: 10px 0 0;
 }
 
-.wc_payment_method {
-  margin-bottom: 20px;
+.woocommerce-Input {
+  color: #333333 !important;
+}
+
+#payment .wc_payment_method {
+  margin-bottom: 10px;
+}
+
+#payment input[type="checkbox"],
+#payment input[type="radio"] {
+  width: 20px;
+}
+
+#payment ul {
+  margin: 15px 0 5px;
+}
+
+#payment ul li {
+  margin: 10px 0;
+}
+
+p#billing_new_fild12_field .woocommerce-input-wrapper {
+  display: none !important;
+}
+
+#shipping_method li {
+  margin: 10px 0;
+}
+
+#shipping_method li label {
+  margin-left: 15px;
 }
 
 .woocommerce-order .woocommerce-notice {
   color: #ff7800;
   font-weight: bold;
   font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .woocommerce-order ul li {
@@ -3586,14 +3624,12 @@ div.wpcf7-response-output {
   font-size: 1.25em;
 }
 
-.woocommerce-order-overview__payment-method,
 .woocommerce-column--shipping-address,
 .cart-subtotal,
 #billing_country_field,
 .sbscrbr-unsubscribe-wrap,
 .logged-in-as,
-.woocommerce-message,
-.wc_payment_methods {
+.woocommerce-message {
   display: none;
 }
 
@@ -3650,7 +3686,15 @@ div.wpcf7-response-output {
   display: none;
 }
 
+.woocommerce-orders-table td {
+  text-align: center;
+}
+
 .woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address:nth-child(2) {
+  display: none;
+}
+
+.address {
   display: none;
 }
 
@@ -3796,6 +3840,10 @@ div.wpcf7-response-output {
       flex-wrap: wrap;
 }
 
+#sale .product__items ul li .sale__product-card {
+  margin: 0 8px 20px;
+}
+
 #sale .product__items .added_to_cart {
   left: -70px;
   bottom: -15px;
@@ -3885,8 +3933,8 @@ textarea[name="order_comments"] {
   border-radius: 4px;
 }
 
-#shipping_method li {
-  margin: 10px 0;
+#wcus_np_billing_fields {
+  max-width: 333px;
 }
 
 /* iPads (portrait and landscape) ----------- */
